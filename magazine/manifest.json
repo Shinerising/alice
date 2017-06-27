@@ -1,0 +1,15 @@
+{
+    "short_name": "My Magazine",
+    "name": "My Magazine - Alice's Masterpiece",
+    "icons": [
+        {
+            "src": "images/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "background_color": "#FFFFFF",
+    "theme_color": "#ff3366", 
+    "display": "fullscreen",
+    "orientation": "landscape"
+}
