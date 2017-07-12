@@ -150,7 +150,8 @@ var text_list = {
 		menu_index: "Index",
 		menu_resume: "Resume",
 		menu_mywork: "Collection",
-		menu_about: "Contact"
+		menu_about: "Contact",
+		year: (new Date()).getFullYear()
 	},
 	chs: {
 		title: "您好！我是阎泽群！",
@@ -161,7 +162,8 @@ var text_list = {
 		menu_index: "首页",
 		menu_resume: "我的简历",
 		menu_mywork: "我的作品",
-		menu_about: "联系我"
+		menu_about: "联系我",
+		year: (new Date()).getFullYear()
 	},
 	cht: {
 		title: "您好！我是閻澤群！",
@@ -172,7 +174,8 @@ var text_list = {
 		menu_index: "首頁",
 		menu_resume: "我的簡歷",
 		menu_mywork: "我的作品",
-		menu_about: "聯繫我"
+		menu_about: "聯繫我",
+		year: (new Date()).getFullYear()
 	},
 	jan: {
 		title: "こんにちは、閻 澤群です！",
@@ -183,7 +186,8 @@ var text_list = {
 		menu_index: "ホーム",
 		menu_resume: "履歴",
 		menu_mywork: "コレクション",
-		menu_about: "コンタクト"
+		menu_about: "コンタクト",
+		year: (new Date()).getFullYear()
 	}
 };
 
