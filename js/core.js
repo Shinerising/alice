@@ -144,6 +144,9 @@ var text_list = {
 	eng: {
 		title: "Hello! I'm Alice!",
 		index_title: "Hello! I'm Alice!",
+		resume_title: "My Resume",
+		mywork_title: "My Collection",
+		about_title: "Contact Me",
 		menu_index: "Index",
 		menu_resume: "Resume",
 		menu_mywork: "Collection",
@@ -152,6 +155,9 @@ var text_list = {
 	chs: {
 		title: "您好！我是阎泽群！",
 		index_title: "您好！我是阎泽群！",
+		resume_title: "我的简历",
+		mywork_title: "我的作品",
+		about_title: "我的联系方式",
 		menu_index: "首页",
 		menu_resume: "我的简历",
 		menu_mywork: "我的作品",
@@ -160,6 +166,9 @@ var text_list = {
 	cht: {
 		title: "您好！我是閻澤群！",
 		index_title: "您好！我是閻澤群！",
+		resume_title: "我的簡歷",
+		mywork_title: "我的作品",
+		about_title: "我的聯繫方式",
 		menu_index: "首頁",
 		menu_resume: "我的簡歷",
 		menu_mywork: "我的作品",
@@ -168,6 +177,9 @@ var text_list = {
 	jan: {
 		title: "こんにちは、閻 澤群です！",
 		index_title: "こんにちは、閻 澤群です！",
+		resume_title: "私の履歴",
+		mywork_title: "私の仕事",
+		about_title: "私の連絡先",
 		menu_index: "ホーム",
 		menu_resume: "履歴",
 		menu_mywork: "コレクション",
@@ -175,10 +187,30 @@ var text_list = {
 	}
 };
 
-setTimeout(function () {
+var lang = window.navigator.userLanguage || window.navigator.language;
+
+if (lang.toLowerCase().indexOf("en") !== -1) {
+	text = text_list.eng;
+} else if (lang.toLowerCase().indexOf("tw") !== -1) {
+	text = text_list.cht;
+} else if (lang.toLowerCase().indexOf("hk") !== -1) {
+	text = text_list.cht;
+} else if (lang.toLowerCase().indexOf("hant") !== -1) {
+	text = text_list.cht;
+} else if (lang.toLowerCase().indexOf("zh") !== -1) {
+	text = text_list.chs;
+} else if (lang.toLowerCase().indexOf("ja") !== -1) {
+	text = text_list.jan;
+} else {
+	text = text_list.eng;
+}
+
+document.querySelectorAll('[data]').forEach(function (ele) {
 	'use strict';
-	document.body.classList.add('show');
-}, 500);
+	if (text[ele.getAttribute('data')]) {
+		ele.innerHTML = text[ele.getAttribute('data')];
+	}
+});
 
 document.querySelectorAll('.button').forEach(function (item) {
 	'use strict';
@@ -215,9 +247,20 @@ document.querySelectorAll('.lang-button').forEach(function (item) {
 		document.querySelectorAll('[data]').forEach(function (ele) {
 			if (text[ele.getAttribute('data')]) {
 				ele.innerHTML = text[ele.getAttribute('data')];
+				ele.classList.add('blur');
 			}
+		});
+		window.requestAnimationFrame(function () {
+			document.querySelectorAll('[data]').forEach(function (ele) {
+				ele.classList.remove('blur');
+			});
 		});
 		document.getElementsByClassName('selected')[0].classList.remove('selected');
 		this.classList.add('selected');
 	});
 });
+
+setTimeout(function () {
+	'use strict';
+	document.body.classList.add('show');
+}, 500);

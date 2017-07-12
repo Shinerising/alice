@@ -4,8 +4,9 @@ html {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	direction: ltr;
-	background: linear-gradient(to top, #FFF, #f0f0f0);
-	color: #333;
+	background: #FFF;
+	color: #37474F;
+	;
 }
 
 body {
@@ -91,7 +92,6 @@ p {
 	margin-top: 0;
 	margin-bottom: 1.5rem;
 	text-align: justify;
-	/*word-break: break-all;*/
 }
 
 ul,
@@ -102,6 +102,14 @@ ol {
 
 li {
 	list-style: none;
+}
+
+[data] {
+	transition: opacity .5s;
+}
+
+.blur {
+	opacity: 0;
 }
 
 :focus {
@@ -167,7 +175,7 @@ ul.navbar-nav>li>a {
 
 ul.navbar-nav>li>a:hover,
 ul.navbar-nav>li>a.active {
-	transform: scale(1.6);
+	transform: scale(1.5);
 }
 
 ul.navbar-nav:hover>li>a.active {
@@ -175,7 +183,7 @@ ul.navbar-nav:hover>li>a.active {
 }
 
 ul.navbar-nav:hover>li>a:hover {
-	transform: scale(1.6);
+	transform: scale(1.5);
 }
 
 main {
@@ -243,10 +251,19 @@ section>.container {
 }
 
 .panel {
-	padding: 1rem 2rem;
-	min-height: 50rem;
+	padding: 1rem 4rem;
+	min-height: 100vh;
+	box-sizing: border-box;
 	background: rgba(255, 255, 255, .6);
 	margin-bottom: 5rem;
+}
+
+.content {}
+
+.avatar-img {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
 }
 
 footer.page-footer {
