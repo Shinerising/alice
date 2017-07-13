@@ -26,7 +26,6 @@ section {
 }
 
 a {
-	text-decoration: none;
 	color: #555;
 	transition: color .3s, background-color .3s;
 }
@@ -144,6 +143,7 @@ header.page-header {
 	z-index: 1024;
 	font-size: 1rem;
 	line-height: 1rem;
+	pointer-events: none;
 	transform: translateY(-4rem);
 	transition: transform 1s 1s, background .5s;
 }
@@ -152,6 +152,7 @@ nav.navbar {
 	width: 20rem;
 	float: right;
 	font-weight: bold;
+	pointer-events: all;
 }
 
 ul.navbar-nav {
@@ -171,6 +172,7 @@ ul.navbar-nav>li>a {
 	color: #FFF;
 	transition: transform .3s;
 	font-size: .9rem;
+	text-decoration: none;
 }
 
 ul.navbar-nav>li>a:hover,
@@ -276,6 +278,7 @@ footer.page-footer {
 	box-sizing: border-box;
 	z-index: 1024;
 	line-height: 1rem;
+	pointer-events: none;
 	transform: translateY(4rem);
 	transition: transform 1s 1.8s, background .5s;
 }
@@ -296,6 +299,7 @@ ul.lang-list {
 	width: 16rem;
 	float: right;
 	display: flex;
+	pointer-events: all;
 }
 
 ul.lang-list>li {
@@ -311,6 +315,7 @@ ul.lang-list>li>a {
 	transition: opacity .3s;
 	opacity: .6;
 	font-size: .75rem;
+	text-decoration: none;
 }
 
 ul.lang-list>li>a:hover,
@@ -424,11 +429,19 @@ body.show footer.page-footer {
 		float: none;
 		display: flex;
 	}
+	ul.lang-list>li>a{
+		margin: 0 auto;
+		text-align: center;
+	}
 	@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
-		header.page-header,
+		header.page-header {
+			-webkit-backdrop-filter: saturate(180%) blur(1rem);
+			backdrop-filter: saturate(180%) blur(1rem);
+		}
 		footer.page-footer {
 			-webkit-backdrop-filter: saturate(180%) blur(1rem);
 			backdrop-filter: saturate(180%) blur(1rem);
+			background: rgba(255, 255, 255, .5);
 		}
 	}
 }

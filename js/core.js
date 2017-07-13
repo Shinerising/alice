@@ -151,6 +151,7 @@ var text_list = {
 		menu_resume: "Resume",
 		menu_mywork: "Collection",
 		menu_about: "Contact",
+		index_content: "",
 		year: (new Date()).getFullYear()
 	},
 	chs: {
@@ -163,6 +164,7 @@ var text_list = {
 		menu_resume: "我的简历",
 		menu_mywork: "我的作品",
 		menu_about: "联系我",
+		index_content: "",
 		year: (new Date()).getFullYear()
 	},
 	cht: {
@@ -175,6 +177,7 @@ var text_list = {
 		menu_resume: "我的簡歷",
 		menu_mywork: "我的作品",
 		menu_about: "聯繫我",
+		index_content: "",
 		year: (new Date()).getFullYear()
 	},
 	jan: {
@@ -187,6 +190,7 @@ var text_list = {
 		menu_resume: "履歴",
 		menu_mywork: "コレクション",
 		menu_about: "コンタクト",
+		index_content: "",
 		year: (new Date()).getFullYear()
 	}
 };
@@ -259,7 +263,9 @@ document.querySelectorAll('.lang-button').forEach(function (item) {
 				ele.classList.remove('blur');
 			});
 		});
-		document.getElementsByClassName('selected')[0].classList.remove('selected');
+		if (document.getElementsByClassName('selected').length) {
+			document.getElementsByClassName('selected')[0].classList.remove('selected');
+		}
 		this.classList.add('selected');
 	});
 });
