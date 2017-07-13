@@ -4,140 +4,6 @@
   fetch
  */
 
-function genFormData(p) {
-	'use strict';
-	var data = new FormData(),
-		val,
-		k,
-		i,
-		l;
-	for (k in p) {
-		if (p.hasOwnProperty(k)) {
-			val = p[k];
-			if (Array.isArray(val)) {
-				for (i = 0, l = val.length; i < l; i += 1) {
-					data.append(k + '[]', val[i]);
-				}
-			} else {
-				data.append(k, val);
-			}
-		}
-	}
-	return data;
-}
-
-function rectsIntersect(a, b) {
-	'use strict';
-	return a[0] < b[2] && a[2] > b[0] && a[1] < b[3] && a[3] > b[1];
-}
-
-function getPageRect() {
-	'use strict';
-	var isquirks, page, doc, x, y, w, h;
-	isquirks = document.compatMode !== 'BackCompat';
-	page = isquirks ? document.documentElement : document.body;
-	doc = document.documentElement;
-	x = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
-	y = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-	w = window.innerWidth === undefined ? window.innerWidth : page.clientWidth;
-	h = window.innerHeight === undefined ? window.innerHeight : page.clientHeight;
-	return [x, y, x + w, y + h];
-}
-
-function getElementRect(element) {
-	'use strict';
-	var x = 0,
-		y = 0,
-		w = element.offsetWidth,
-		h = element.offsetHeight;
-	while (element.offsetParent !== null) {
-		x += element.offsetLeft;
-		y += element.offsetTop;
-		element = element.offsetParent;
-	}
-	return [x, y, x + w, y + h];
-}
-
-function getElementTop(element) {
-	'use strict';
-	var y = 0;
-	while (element.offsetParent !== null) {
-		y += element.offsetTop;
-		element = element.offsetParent;
-	}
-	return y;
-}
-
-function VisibilityMonitor(showfn, hidefn) {
-	'use strict';
-
-	function check() {
-		var elements = document.getElementsByClassName('lazyload'),
-			i,
-			isshown,
-			lockitems,
-			top_temp;
-
-		for (i = 0; i < elements.length; i += 1) {
-			isshown = elements[i].classList.contains('show');
-			if (rectsIntersect(getPageRect(), getElementRect(elements[i])) !== isshown) {
-				isshown = !isshown;
-				if (isshown) {
-					if (elements[i].complete) {
-						showfn(elements[i]);
-					} else if (elements[i].complete === undefined) {
-						showfn(elements[i]);
-					}
-				} else {
-					if (hidefn) {
-						hidefn(elements[i]);
-					}
-				}
-			}
-		}
-		lockitems = document.getElementsByClassName('lockonhead');
-		for (i = 0; i < lockitems.length; i += 1) {
-			if (lockitems[i].originalTop) {
-				top_temp = lockitems[i].originalTop;
-			} else {
-				top_temp = getElementTop(lockitems[i]);
-			}
-			if (top_temp < window.scrollY) {
-				lockitems[i].classList.add('fixed');
-				lockitems[i].originalTop = top_temp;
-			} else {
-				lockitems[i].classList.remove('fixed');
-				lockitems[i].originalTop = 0;
-			}
-		}
-
-	}
-	if (window.attachEvent) {
-		window.attachEvent('onresize', check);
-		window.attachEvent('onscroll', check);
-	} else if (window.addEventListener) {
-		window.addEventListener('resize', check, true);
-		window.addEventListener('scroll', check, true);
-	}
-	check();
-	setInterval(function () {
-		check();
-	}, 1000);
-}
-
-
-
-var visibilityMonitor = new VisibilityMonitor(
-	function (element) {
-		'use strict';
-		element.classList.add('show');
-		setTimeout(function () {
-			element.classList.remove('lazyload');
-		}, 500);
-	},
-	null
-);
-
 var text = {};
 
 var text_list = {
@@ -152,6 +18,41 @@ var text_list = {
 		menu_mywork: "Collection",
 		menu_about: "Contact",
 		index_content: "",
+		resume_name: "Alice Yan",
+		resume_title1: "Digital Animator",
+		resume_title2: "Game Designer",
+		resume_type1: "Education",
+		resume_type2: "Experience",
+		resume_org1: "Peking University",
+		resume_time1: "",
+		resume_pro1: "master of digital animation",
+		resume_info1: "",
+		resume_org2: "Stanford University",
+		resume_time2: "",
+		resume_pro2: "visiting scholar",
+		resume_info2: "",
+		resume_org3: "Ministry of Culture of the PRC",
+		resume_time3: "",
+		resume_pro3: "research assistant",
+		resume_info3: "",
+		resume_org4: "Center for ETL of Peking University",
+		resume_time4: "",
+		resume_pro4: "project leader",
+		resume_info4: "",
+		resume_org5: "Peking University Press",
+		resume_time5: "",
+		resume_pro5: "office assistant",
+		resume_info5: "",
+		resume_org6: "Peking University",
+		resume_time6: "",
+		resume_pro6: "faculty assistant",
+		resume_info6: "",
+		resume_skill: "skills",
+		resume_skill1: "Animation",
+		resume_skill2: "Storyboard",
+		resume_skill3: "Scene Design",
+		resume_skill4: "3D Modeling",
+		resume_social: "my social",
 		year: (new Date()).getFullYear()
 	},
 	chs: {
@@ -165,6 +66,41 @@ var text_list = {
 		menu_mywork: "我的作品",
 		menu_about: "联系我",
 		index_content: "",
+		resume_name: "阎泽群",
+		resume_title1: "数字动画师",
+		resume_title2: "游戏设计师",
+		resume_type1: "教育经历",
+		resume_type2: "项目经验",
+		resume_org1: "北京大学",
+		resume_time1: "",
+		resume_pro1: "数字动画专业硕士",
+		resume_info1: "",
+		resume_org2: "斯坦福大学",
+		resume_time2: "",
+		resume_pro2: "访问学者",
+		resume_info2: "",
+		resume_org3: "中国文化部",
+		resume_time3: "",
+		resume_pro3: "研究助理",
+		resume_info3: "",
+		resume_org4: "北京大学教师教学发展中心",
+		resume_time4: "",
+		resume_pro4: "课题组组长",
+		resume_info4: "",
+		resume_org5: "北京大学出版社",
+		resume_time5: "",
+		resume_pro5: "办公室助理",
+		resume_info5: "",
+		resume_org6: "北京大学",
+		resume_time6: "",
+		resume_pro6: "学生助理",
+		resume_info6: "",
+		resume_skill: "我的技能",
+		resume_skill1: "动画制作",
+		resume_skill2: "故事版",
+		resume_skill3: "场景设计",
+		resume_skill4: "3D建模",
+		resume_social: "社交媒体",
 		year: (new Date()).getFullYear()
 	},
 	cht: {
@@ -178,6 +114,41 @@ var text_list = {
 		menu_mywork: "我的作品",
 		menu_about: "聯繫我",
 		index_content: "",
+		resume_name: "Alice Yan",
+		resume_title1: "Digital Animator",
+		resume_title2: "Game Designer",
+		resume_type1: "Education",
+		resume_type2: "Experience",
+		resume_org1: "Peking University",
+		resume_time1: "",
+		resume_pro1: "",
+		resume_info1: "",
+		resume_org2: "Stanford University",
+		resume_time2: "",
+		resume_pro2: "",
+		resume_info2: "",
+		resume_org3: "Ministry of Culture of the PRC",
+		resume_time3: "",
+		resume_pro3: "",
+		resume_info3: "",
+		resume_org4: "Center for ETL of Peking University",
+		resume_time4: "",
+		resume_pro4: "",
+		resume_info4: "",
+		resume_org5: "Peking University Press",
+		resume_time5: "",
+		resume_pro5: "",
+		resume_info5: "",
+		resume_org6: "Peking University",
+		resume_time6: "",
+		resume_pro6: "",
+		resume_info6: "",
+		resume_skill: "skills",
+		resume_skill1: "Animation",
+		resume_skill2: "Storyboard",
+		resume_skill3: "Scene Design",
+		resume_skill4: "3D Modeling",
+		resume_social: "my social",
 		year: (new Date()).getFullYear()
 	},
 	jan: {
@@ -191,6 +162,41 @@ var text_list = {
 		menu_mywork: "コレクション",
 		menu_about: "コンタクト",
 		index_content: "",
+		resume_name: "Alice Yan",
+		resume_title1: "Digital Animator",
+		resume_title2: "Game Designer",
+		resume_type1: "Education",
+		resume_type2: "Experience",
+		resume_org1: "Peking University",
+		resume_time1: "",
+		resume_pro1: "",
+		resume_info1: "",
+		resume_org2: "Stanford University",
+		resume_time2: "",
+		resume_pro2: "",
+		resume_info2: "",
+		resume_org3: "Ministry of Culture of the PRC",
+		resume_time3: "",
+		resume_pro3: "",
+		resume_info3: "",
+		resume_org4: "Center for ETL of Peking University",
+		resume_time4: "",
+		resume_pro4: "",
+		resume_info4: "",
+		resume_org5: "Peking University Press",
+		resume_time5: "",
+		resume_pro5: "",
+		resume_info5: "",
+		resume_org6: "Peking University",
+		resume_time6: "",
+		resume_pro6: "",
+		resume_info6: "",
+		resume_skill: "skills",
+		resume_skill1: "Animation",
+		resume_skill2: "Storyboard",
+		resume_skill3: "Scene Design",
+		resume_skill4: "3D Modeling",
+		resume_social: "my social",
 		year: (new Date()).getFullYear()
 	}
 };
@@ -254,15 +260,15 @@ document.querySelectorAll('.lang-button').forEach(function (item) {
 		}
 		document.querySelectorAll('[data]').forEach(function (ele) {
 			if (text[ele.getAttribute('data')]) {
-				ele.innerHTML = text[ele.getAttribute('data')];
 				ele.classList.add('blur');
 			}
 		});
-		window.requestAnimationFrame(function () {
+		setTimeout(function () {
 			document.querySelectorAll('[data]').forEach(function (ele) {
+				ele.innerHTML = text[ele.getAttribute('data')];
 				ele.classList.remove('blur');
 			});
-		});
+		}, 200);
 		if (document.getElementsByClassName('selected').length) {
 			document.getElementsByClassName('selected')[0].classList.remove('selected');
 		}
