@@ -37,6 +37,21 @@ a:hover {
 	color: #999;
 }
 
+.content p{
+	margin-top: 1.5rem;
+	margin-bottom: .5rem;
+	font-size:.9rem;
+	line-height:1.8;
+}
+
+.text-indent{
+	text-indent: 2rem;
+}
+
+.content li{
+	padding-left:2rem;
+}
+
 img {
 	max-width: 100%;
 }
@@ -264,6 +279,7 @@ section>.container {
 	min-height: 100vh;
 	box-sizing: border-box;
 	background: rgba(255, 255, 255, .6);
+	padding-bottom: 2rem;
 	margin-bottom: 5rem;
 }
 
@@ -275,7 +291,7 @@ section>.container {
 
 .row {
 	position: relative;
-	overflow: auto;
+	overflow: hidden;
 }
 
 .row-block-left,
@@ -360,7 +376,7 @@ section>.container {
 	width: 6rem;
 	height: 6rem;
 	margin: 1rem auto;
-	z-index:10;
+	z-index: 10;
 }
 
 .skill-list {
@@ -500,6 +516,8 @@ section>.container {
 .row-list-column.title>h3,
 .row-list-column.info>h3 {
 	margin: 0;
+	line-height: 1.2;
+	margin-bottom:.3rem;
 }
 
 .row-list-column.title>time,
@@ -546,6 +564,7 @@ footer.page-footer {
 	opacity: .6;
 	font-size: .7rem;
 	opacity: .6;
+	pointer-events: all;
 }
 
 ul.lang-list {
@@ -596,6 +615,29 @@ ul.lang-list:hover>li>a:hover {
 	background-image: url('/icons/double_arrow.svg')
 }
 
+.icon-social{
+	width: 1.6em;
+	height: 1.6em;
+	vertical-align: middle;
+	margin-right:.5rem;
+}
+
+.icon-facebook {
+	background-image: url('/icons/facebook.svg')
+}
+
+.icon-twitter {
+	background-image: url('/icons/twitter.svg')
+}
+
+.icon-behance {
+	background-image: url('/icons/behance.svg')
+}
+
+.icon-linkedin {
+	background-image: url('/icons/linkedin.svg')
+}
+
 .icon-facebook-white {
 	background-image: url('/icons/facebook_white.svg')
 }
@@ -630,6 +672,11 @@ body.show footer.page-footer {
 	transform: none;
 }
 
+.resume-page {
+	transition: opacity .5s .5s;
+	opacity: 0;
+}
+
 .row-block-left {
 	transition: transform 1s .5s;
 	transform: translateX(-100vw);
@@ -659,6 +706,7 @@ body.show footer.page-footer {
 	transition-delay: 1.5s;
 }
 
+.section-wrapper.resume .resume-page,
 .section-wrapper.resume .row-block-left,
 .section-wrapper.resume .row-block-right,
 .section-wrapper.resume .row-block {
@@ -845,7 +893,7 @@ body.show footer.page-footer {
 	.social-item>h3 {
 		line-height: .8rem;
 	}
-	.row-avatar{
-		display:none;
+	.row-avatar {
+		display: none;
 	}
 }
