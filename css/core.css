@@ -793,6 +793,21 @@ body.show footer.page-footer {
 	opacity: 1;
 }
 
+.collection-column{
+	transition: transform 1s .5s, opacity 1s .5s;
+	transform: translateY(3rem);
+	opacity: 0;
+}
+
+.collection-column:nth-child(2) {
+	transition-delay: 1s;
+}
+
+.section-wrapper.mywork .collection-column{
+	transform: none;
+	opacity: 1;
+}
+
 @media only screen and (max-width: 5120px) {
 	html {
 		font-size: 64px;
