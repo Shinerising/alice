@@ -335,7 +335,7 @@ section>.container {
 }
 
 .row-block-left.header {
-	padding: 2.5rem 2rem;
+	padding: 2.5rem 1rem;
 }
 
 .row-block-right.header {
@@ -408,7 +408,7 @@ section>.container {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: pink;
+	background: #81D8D0;
 	transform-origin: left;
 	transition: transform .5s 1s;
 }
@@ -489,6 +489,7 @@ section>.container {
 }
 
 .row-header {
+	position:relative;
 	margin-top: 1.5rem;
 	background-size: 5% 100%;
 	background-image: linear-gradient(90deg, transparent 30%, #FFF 30%, #FFF 70%, transparent 70%), linear-gradient(0deg, transparent 48%, #AAA 48%, #AAA 52%, transparent 52%);
@@ -620,6 +621,24 @@ ul.lang-list:hover>li>a:hover {
 	height: 1.6em;
 	vertical-align: middle;
 	margin-right:.5rem;
+}
+
+.icon-edu {
+	background-image: url('/icons/edu.svg')
+}
+
+.icon-work {
+	background-image: url('/icons/work.svg')
+}
+
+.icon-web {
+	transform:scale(.8);
+	background-image: url('/icons/web.svg')
+}
+
+.icon-mail {
+	transform:scale(.8);
+	background-image: url('/icons/mail.svg')
 }
 
 .icon-facebook {
