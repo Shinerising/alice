@@ -55,6 +55,7 @@ var text_list = {
 		resume_skill3: "Scene Design",
 		resume_skill4: "3D Modeling",
 		resume_social: "my social",
+		resume_download: "Download",
 		about_p1: "Glad to see you my friends! You can find me on these social networks!",
 		about_p2: "And you can also send me Email! Here's my mail address:",
 		about_p3: "Thank you to visit my site!",
@@ -108,6 +109,7 @@ var text_list = {
 		resume_skill3: "场景设计",
 		resume_skill4: "3D建模",
 		resume_social: "社交媒体",
+		resume_download: "下载简历",
 		about_p1: "很高兴和您成为朋友！您可以在以下的社交网络上联系我。",
 		about_p2: "您也可以给我发送电子邮件，下面是我的邮箱地址：",
 		about_p3: "感谢您访问我的网站！",
@@ -161,6 +163,7 @@ var text_list = {
 		resume_skill3: "場景設計",
 		resume_skill4: "3D建模",
 		resume_social: "社交媒體",
+		resume_download: "下載簡歷",
 		about_p1: "很高興和您成為朋友！您可以在以下的社交網路上聯繫我。",
 		about_p2: "您也可以給我發送電子郵件，下面是我的電郵地址：",
 		about_p3: "感謝您訪問我的站點！",
@@ -214,6 +217,7 @@ var text_list = {
 		resume_skill3: "シーンデザイン",
 		resume_skill4: "3Dモデリング",
 		resume_social: "ソーシャル",
+		resume_download: "ダンロード",
 		about_p1: "あなたの友人であることがうれしいです！あなたは以下のソーシャルネットワーク上で私に連絡することができます。",
 		about_p2: "メールはもちろんオッケーだ、私のメールアドレスはここ：",
 		about_p3: "このサイトを訪問していただきありがとうございます！",
@@ -307,6 +311,23 @@ document.querySelectorAll('.lang-button').forEach(function (item) {
 			document.getElementsByClassName('selected')[0].classList.remove('selected');
 		}
 		this.classList.add('selected');
+	});
+});
+
+document.querySelectorAll('.collection-image').forEach(function (item) {
+	'use strict';
+	item.addEventListener('click', function (e) {
+		e.preventDefault();
+		if (this.classList.contains('focus')) {
+			this.classList.remove('focus');
+			document.getElementById('collection').classList.remove('hasFocus');
+		} else {
+			document.querySelectorAll('.focus').forEach(function (ele) {
+				ele.classList.remove('focus');
+			});
+			this.classList.add('focus');
+			document.getElementById('collection').classList.add('hasFocus');
+		}
 	});
 });
 
