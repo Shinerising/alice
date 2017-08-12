@@ -260,7 +260,7 @@ if (document.location.href.indexOf("?index") !== -1) {
 	document.getElementsByClassName('section-wrapper')[0].classList.add('about');
 }
 
-document.querySelectorAll('.button').forEach(function (item) {
+document.querySelectorAll('.section-button').forEach(function (item) {
 	'use strict';
 	item.addEventListener('click', function (e) {
 		e.preventDefault();
