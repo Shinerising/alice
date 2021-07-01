@@ -56,7 +56,7 @@ let startLoading = () => {
       setTimeout(loadCount, 100);
     }　
     else {
-      openLink('/index1.html', true);
+      openLink('index1.html', true);
     }
   }　
   loadCount();
