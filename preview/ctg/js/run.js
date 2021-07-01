@@ -1,8 +1,8 @@
 let linkCheck = (link) => {
-  if (link == '/index.html' || link == '/') {
+  if (link.endsWith('/index.html') || link == link.endsWith('/')) {
     startLoading();
   }
-  if (link == '/index1.html') {
+  if (link.endsWith('/index1.html')) {
     if (document.getElementById("bg-music")) {
       document.getElementById("bg-music").volume = 0.4;
     }
