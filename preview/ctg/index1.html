@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+  <div class="bg2">
+  <div class="head">
+    <div class="logo"><img src="images/logo.png" /></div>
+    <div class="top tt1"><a href="index2.html">跳过</a></div>
+  </div>
+  <div class="nr1_p1 clear">
+    <div class="pp2"><img src="images/tu3.png" width="80%" /></div>
+    <div class="nr1_p13" style="background:url(images/tu4.jpg) no-repeat; background-size:100% auto;">
+      <!--<img src="images/tu4.jpg"/>-->
+      <!--<video src="images/tu4.mp4" controls="controls" loop="loop"  autoplay="autoplay"></video>-->
+      <video id="video1" controls="controls" loop="loop"  autoplay="autoplay" width="100%" poster="images/tu4.jpg">
+        <source src="images/tu4.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hj2"></div>
+    <div class="nr1_p14 pp3 tt3 cc"><a href="index2.html">请点击一起来看看！</a></div>
+<!--    <div class="nr1_p14 pp3 tt3 cc"><a href="#" class="big-link" data-reveal-id="myModal">一起来看看！</a></div>
+    <div id="myModal" class="reveal-modal">
+      <div class="reveal-modal0"> <a class="close-reveal-modal">&#215;</a>
+        <video id="video1" controls="controls" loop="loop"  autoplay="autoplay" width="100%">
+          <source src="images/tu4.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.reveal.js"></script>
+    <style>
+    .reveal-modal-bg { position: fixed; height: 100%; width: 100%;  background: #000; background: rgba(0,0,0,.8); z-index: 100; display: none;  top: 0; left: 0;}
+.reveal-modal{visibility: hidden; position:absolute; top:0; left:0; width:100%; height:100%; z-index:110; display: flex;   justify-content:center;  align-items:Center;}
+.reveal-modal0 {/*  top:30%; left: 50%; margin-left: -250px;  position: absolute;*/ background: #eee url(modal-gloss.png) no-repeat -200px -80px;z-index: 101;  padding: 30px 40px 34px; -moz-border-radius: 5px; width:80%; max-width:300px; z-index:111;-webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 0 10px rgba(0,0,0,.4); -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);-box-shadow: 0 0 10px rgba(0,0,0,.4); position:relative;}
+.reveal-modal.small { width: 200px; margin-left: -140px;}
+.reveal-modal.medium { width: 400px; margin-left: -240px;}
+.reveal-modal.large{ width: 600px; margin-left: -340px;}
+.reveal-modal.xlarge { width: 800px; margin-left: -440px;}
+.reveal-modal .close-reveal-modal{  font-size: 22px;line-height: .5;  position: absolute; top: 8px; right: 11px;  color: #aaa;  text-shadow: 0 -1px 1px rbga(0,0,0,.6); font-weight: bold;  cursor: pointer;} 
+    </style>
+-->    
+    <div class="nr1_p13 tt4">因三峡工程而生的三峡集团 <br />
+      携带着与生俱来的红色基因 <br />
+      已发展成为世界最大的水电开发企业 <br />
+      中国最大的清洁能源集团 </div>
+  </div>
+  <div class="foot tt3"> 中国三峡出版传媒公司<br />
+    出品 </div>
+</div>
+</div>
+
+</body>
+</html>

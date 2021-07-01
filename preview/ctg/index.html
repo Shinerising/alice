@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+
+<div class="bg1">
+  <div class="head">
+    <div class="logo"><img src="images/logo.png" /></div>
+    <div class="top"></div>
+  </div>
+  <div class="nr1_p1 clear">
+    <div class="pp2"><img src="images/tu1.png" width="60%" /></div>
+    <div class="pp2"><img src="images/tu2.png" width="75%" /></div>
+    <div class="hj2"></div>
+    <div class=" clear"><!--<div class="nr1_p12">
+      <div class="progress-out" id="div1">
+        <div class="progress-in"></div>
+        <div class="percent-show tt5">三峡记忆正在加载 <span>0</span>%</div>
+      </div>
+      </div>
+<script src="js/jquery.min.js"></script>
+      <script src="js/jquery.myProgress.js"></script>
+      <script>
+    $(function () {
+        $("#div1").myProgress({speed: 3000, percent: 100, width: "100%" });
+    })
+</script>-->
+<form name=loading> 
+　<div class="nr1_p11" style=" width:280px;"><p align=center> <input type=text name=chart size=80 style=" letter-spacing:1.5px; font-weight:bold; color:#f9001a; background: url(images/tbg1.png); padding:0px; border-style:none; border-radius:5px; padding:0 2px 2px 2px; width:270px;"> </p></div>
+<p style=" text-align:center; color:#f9001a; font-style:italic; padding-top:2%;">三峡记忆正在加载<input type=text name=percent  style="color:#f9001a; text-align:center; background:none; border:none; width:50px;"> </p>
+　</p> 
+</form>
+    </div>
+  </div>
+  <div class="foot tt3">
+    中国三峡出版传媒公司<br />出品
+  </div>
+</div>
+</div>
+
+</body>
+</html>

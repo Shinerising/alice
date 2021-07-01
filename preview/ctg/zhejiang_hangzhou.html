@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/zj_06.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/zj_12.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/zj_13.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 新安江水电站</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;"> 1954年，随着社会主义建设全面开展，华东地区经济用电日趋紧张。</P>
+    <P style=" text-indent:2em;"> 当年3月，正在浙江视察的毛泽东问时任浙江省委副书记江华：“为了解决浙江工业发展动力问题，听说你们在做新安江的文章？”</P>
+    <P style=" text-indent:2em;"> 江华回答道：“新安江电站建设起来，浙江的电力就没有问题了。”</P>
+    <P style=" text-indent:2em;"> 毛泽东说：“你这想法好，新安江要建大型水力发电站，但你们不能仅想浙江，还要为上海、江苏、安徽作贡献。如果新安江电站装机容量有个几十万千瓦，每年发几十亿度电，那将是对杭州、上海、南京等地工业的一个大推进。”</P>
+    <P style=" text-indent:2em;"> 当年5月24日，中共中央华东局批准建设新安江水电站。在这一大背景下，11月，上海水力发电勘测设计局成立，这是三峡集团上海院的历史源头。</P>
+    <div class=" nr1_p31 tt4"><img src="images/zj_14.jpg" />
+      <P></P>
+    </div>
+    <P style=" text-indent:2em;">肩负着党和国家的信任和重托，伴随着新中国第一个“五年计划”建设的滚滚热潮，以潘家铮院士为代表的第一代上海院人秉持筑梦江海、科技报国的初心，义无反顾地奔赴水电站工地。1960年4月22日，第一台7.25万千瓦水轮发电机组正式发电。新安江水电站成为我国第一座自己设计、自己制造和自制设备的大型水力发电站。</P>
+    <P style=" text-indent:2em;">周恩来总理为这一创举题词：“为我国第一座自己设计和自制设备的大型水力发电站的胜利建设而欢呼。”</P>
+    <div class=" nr1_p31 tt4"><img src="images/zj_15.jpg" /></div>
+  </div>
+  <div class="nr1_p3 tt6">
+    <div class="pp2"><img src="images/tbg4.png" /></div>
+    <P style=" text-indent:2em;">新安江水电站的建设，为我国建设葛洲坝、长江三峡等大型水电站积累了宝贵经验，输送了大量人才和技术，被誉为新中国水电建设史上的丰碑。</P>
+    <P style=" text-indent:2em;">建成后的几十年里，新安江水电站一直是华东电网的主力发电厂，巅峰时曾为华东地区提供68％的电力能源，解决了上海、浙江、江苏等地的用电问题。</P>
+    <P style=" text-indent:2em;"> 这座由近两万名技术人员与工人，用智慧和汗水创造的令国内外水电专家交口称赞的奇迹，如今还发挥着调频、调峰、紧急事故备用的重要作用。</P>
+    <P style=" text-indent:2em;"> 2019年，超强台风“利奇马”来袭，新安江水电站顶住了华东电网的频率波动，持续为华东地区输送清洁电力。</P>
+    <P style=" text-indent:2em;"> 2020年夏天，国内遭遇了1998年以来最严重汛情，受强降雨持续影响，新安江水库开启9孔泄洪道泄洪，缓解浙江、安徽等地防汛压力。</P>
+    <div class=" nr1_p31 tt4"><img src="images/zj_16.jpg" />
+      <P>2020年7月8日 新安江水库首次9孔泄洪</P>
+      <P>新华社记者 翁忻旸 摄</P>
+    </div>
+    <P style=" text-indent:2em;"> 六十多年峥嵘岁月，巍峨矗立在铜官峡谷的新安江大坝依然是人们心中的“宝藏工程”，每年都有不计其数的游客前来感受红色文化 接受红色教育。从筑梦新安江到圆梦三峡，从华夏大地到蜚声海内外。</P>
+    <P style=" text-indent:2em;"> 从“追赶者”到“领跑者”，从“中国制造”到“中国创造”，我国水利水电建设事业实现了一个又一个辉煌。（作者：上海院）</P>
+    <div class=" nr1_p31 tt4"><img src="images/zj_17.jpg" /></div>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

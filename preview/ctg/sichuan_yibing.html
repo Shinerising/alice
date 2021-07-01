@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/sc_06.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/sc_16.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/sc_12.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 赵一曼烈士</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">       赵一曼，1905年出生于四川宜宾的一个地主家庭，1926年加入中国共产党，考入黄埔军校武汉分校，成为黄埔历史上招收的唯一一期女学员中的一员。1927年，22岁的她被派往莫斯科中山大学留学，1928年回国后，在宜昌、南昌和上海等地秘密开展党的工作。
+   </P>
+    <P style=" text-indent:2em;">    1931年“九·一八”事变后，赵一曼将不满3岁的儿子托付给亲戚，走进了抗日斗争的前线。穿一身粗布红衣，挎一把驳壳枪，骑一匹白马，冒着枪林弹雨，赵一曼冲锋在战场的最前沿。
+     </P>
+    <P style=" text-indent:2em;">  赵一曼被俘后，敌人对她施以酷刑，用马鞭抽打，用钢针刺伤口，用烧红的烙铁烙皮肉，逼她投降招供。但赵一曼始终宁死不屈，未透漏半句党的秘密。1936年8月2日，赵一曼高唱着《红旗歌》英勇就义，年仅31岁。
+</P>
+    <div class=" nr1_p31 tt4"><img src="images/sc_13.jpg" />
+      <P>赵一曼烈士纪念碑</P>
+    </div>
+  </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">       滨江抒怀铭壮志，红色精神代代传。</P>
+    <P style=" text-indent:2em;">
+       在宜宾市和云南省水富市交界的金沙江峡谷出口处，装机容量640万千瓦、世界排名第十一的巨型水电工程——向家坝水电站正在安全运行着，源源不断地输出绿色电能，为国家的经济发展注入强劲绿色动力。</P>
+    <P style=" text-indent:2em;">
+       向家坝电站建成前，每逢金沙江流域主汛期，两岸城市街道时常有被洪水淹没的风险。向家坝电站投产以后，充分发挥防洪作用，有力保障了金沙江下游两岸人民生命财产安全。
+</P>
+    <div class=" nr1_p31 tt4"><img src="images/sc_14.jpg" />
+      <P>缆江平台工程建设全景</P><P>摄影：刘华</P>
+    </div>
+    <P style=" text-indent:2em;">       自投产发电以来，向家坝水电站已稳定运行了9年，连续9年超额完成发电任务，累计发电量超2500亿千瓦时，可替代7828万吨标准煤，减少2.07亿吨二氧化碳排放，为经济社会绿色低碳发展作出了贡献。</P>
+    <div class=" nr1_p31 tt4"><img src="images/sc_15.jpg" />
+      <P>向家坝电站</P><P>摄影：高峰</P>
+    </div>
+    <P style=" text-indent:2em;">       向家坝电站通航建筑物——向家坝升船机，拓展了长江“黄金水道”功能，促进了向家坝库区腹地经济发展，对推动长江经济带发展发挥了积极作用。自2018年5月26日试通航以来，向家坝升船机累计运行7600余厢次，通过船舶7700余艘次，载货量超300万吨。</P>
+    <P style=" text-indent:2em;">       秉承“建好一座电站，带动一方经济，改善一片环境，造福一方百姓”的水电开发理念，三峡集团积极履行社会责任，积极参与企地共建。截至目前，向家坝电厂累计实施履行18个社会责任项目，投入资金1050万元，促进坝区周边区域教育、交通、医疗和基础设施的大力提升。（作者：宋仁彪 刘建波）
+</P>
+
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

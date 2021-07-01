@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/hub_12.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/hub_19.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/hub_20.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 瓦仓起义</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">战火淬炼初心，生命铸就辉煌。中国共产党领导宜昌人民开展的革命斗争波澜壮阔，无数先烈前赴后继、浴血奋战，理想信念坚如磐石。</P>
+    <P style=" text-indent:2em;">1927年，中央八七会议确定实行土地革命和武装起义的方针，决定发动秋收起义。中共鄂西特委指示：在宜昌当阳首先发动武装起义。1927年9月，在中共当阳县委领导下，以瓦仓区为中心的当阳、远安、荆门、南漳四县边界地区，爆发了声势浩大的武装起义，打响了鄂西地区反抗国民党反动派的第一枪，创建了鄂西第一块红色根据地。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_21.jpg" />
+      <P>成立瓦仓起义指挥部</P>
+    </div>
+    <P style=" text-indent:2em;"> 瓦仓起义的胜利，在鄂西这块土地上，打破了千年沉寂、卷起了万仞波涛。分到田地的贫苦农民扬眉吐气，苏区到处洋溢着欢乐的气氛。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_22.jpg" />
+      <P>瓦仓起义战时指挥部旧址</P>
+    </div>
+  </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">为人民谋幸福，是中国共产党人不变的“初心”。瓦仓起义90多年后，位于宜昌市的三峡集团长江电力秉承这颗“初心”，积极响应乡村振兴战略，因地制宜、精准施策，造福当地人民。</P>
+    <P style=" text-indent:2em;">行走在宜昌市点军区牛扎坪村，蜿蜒整洁的柏油马路两旁，青葱的绿色环绕眼帘，一根根白色站立的太阳能路灯点缀其间，装饰一新的农家饭庄勾勒出一幅新农村旅游小镇的美丽画卷……令人很难想象的是，昔日贫穷的地方，如今已成为宜昌市市民休闲观光的度假地。</P>
+    <P style=" text-indent:2em;">牛扎坪村的脱胎换骨离不开长江电力的倾情扶助。2010年，当第一笔硬化道路的公益扶助款送到牛扎坪的那一刻起，长江电力便擂响了助力点军区生态滨江新城区快速发展的战鼓。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_23.jpg" />
+      <P>牛扎坪村太阳能路灯</P>
+      <P>摄影：张艳平</P>
+    </div>
+    <P style=" text-indent:2em;"> 翻开长江电力对口支援点军的报告，一条条路、一盏盏灯、一口口水池、一个个农产品项目……一笔笔公益数字凝聚成一股股甘露，滋润着曾经贫瘠的土地一步步蜕变、发展。</P>
+    <P style=" text-indent:2em;">至喜大桥飞架南北，打开了点军紫阳村加快发展的对外通道。这个最临近葛洲坝电站的村子的变迁，也牵动着长江电力人的心。</P>
+    <P style=" text-indent:2em;">自2017年以来，长江电力检修厂与宜昌市点军区紫阳村开展企地共建项目，累计定向捐赠资金，用于修建蓄水池、道路拓宽、修建居民点文化广场，切实解决当地居民的生活难题。</P>
+    <P style=" text-indent:2em;">紫阳村居民点分布分散，部分居民点海拔较高，自来水管道无法直接供水，需经过蓄水池进行二次加压。       2017年，长江电力检修厂出资新建150立方米饮用水蓄水池一座，安装加压泵2套，彻底解决了紫阳村1000多名村民饮水困难与紫阳村部分企业的用水问题。</P>
+    <P style=" text-indent:2em;">紫阳村群众反映，现在通行的道路太窄，坡陡弯急。遇到火灾等紧急情况，大型消防车辆无法到达；大型农产品运输车辆无法通行，影响柑橘等农产品销售。长江电力检修厂与当地政府商议将道路由原来的3米拓宽到6米。提及道路改造，村民们连连说：“以前这里经常堵得慌，现在出行方便多了。”</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_24.jpg" />
+      <P>拓宽紫阳村主干道</P>
+    </div>
+    <P style=" text-indent:2em;"> 在紫阳村主干道上，一根根白色太阳能路灯整齐排列在道路两旁。2017年和2019年，长江电力分两批捐赠安装了88盏和140盏路灯，亮化道路7.8公里，为1000余户3000余人安全出行提供了便利。</P>
+    <P style=" text-indent:2em;">近年来，长江电力还投入资金，援建至喜大桥下点军公共停车场、村冷链库和蔬菜周转基地，以及至喜小学校园教育资源建设，为点军地方经济建设和城市发展增添了一臂之力。（作者：刘娟 张艳平） </P>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

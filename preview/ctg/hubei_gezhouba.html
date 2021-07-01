@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/hub_12.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/hub_13.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/hub_14.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 万里长江第一坝</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;"> 葛洲坝，位于湖北省宜昌市境内的长江三峡末端河段上，距离长江三峡出口南津关下游2.3公里，是我国在长江干流上兴建的第一座大型水利枢纽工程，迄今仍然是世界上最大的低水头大流量、径流式水电站。</P>
+    <P style=" text-indent:2em;"> 葛洲坝水利枢纽葆有鲜明的红色基因。工程的研究始于上世纪50年代后期，由毛泽东主席亲自批准兴建，周恩来总理亲自组织论证并起草报告。 </P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_15.jpg" />
+      <P>1970年12月 毛主席作出批示赞成兴建葛洲坝</P>
+    </div>
+    <P style=" text-indent:2em;"> 1970年12月30日，葛洲坝工程开工，10万水电建设者汇聚长江西陵峡口，前方后方都是大会战的战场，建设者们肩挑背扛，豪情万丈。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_16.jpg" />
+      <P>1970年12月30日 葛洲坝水利枢纽开工</P>
+      <P>摄影：彭雄才</P>
+    </div>
+    <P style=" text-indent:2em;"> 1980年11月24日，葛洲坝水利枢纽的管理单位——葛洲坝电厂正式成立。1981年7月30日，首台水轮发电机组并网发电。</P>
+    <P style=" text-indent:2em;"> 1988年12月，葛洲坝水利枢纽全部机组投产发电。从此，古老的母亲河终被唤醒，源源不竭的电能光耀神州大地。</P>
+    <P style=" text-indent:2em;"> 葛洲坝水利枢纽凝聚着中国人自己的智慧和力量。它是我国在长江干流上自主设计、施工、制造安装、运行管理的第一座大型水利枢纽工程，是三峡工程的实战准备。它攻克了长江上建坝，泥沙、航运、截流、大型机电设备制造、水电工程生态保护等20世纪70年代中国水利水电建设上的一系列技术难题，极大推动了水电装备制造业的创新发展和水电科技进步，开启了中国水电事业走向辉煌的大门。</P>
+    <P style=" text-indent:2em;"> 葛洲坝水利枢纽是我国水电工业文化的重要载体。它记录了国家水电事业的发展轨迹，见证了我国水电从弱到强、从追赶到引领的历史进程，具有重要的历史价值、科技价值、社会价值和艺术价值。2020年12月24日，葛洲坝水利枢纽入选工信部第四批国家工业遗产名单。 </P>
+  </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">       截至 2020年12月31日，葛洲坝电站连续安全生产40年，累计发电超5860亿千瓦时，相当于节约标煤约1.8亿吨，减少二氧化碳4.9亿吨；大坝安全下泄长江干流45000立方米/秒以上的洪水超过60多次。40 余年来，葛洲坝水利枢纽运行良好，充分发挥了防洪、发电、航运、生态环保等巨大综合效益。
+</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_17.jpg" />
+      <P>源源不断的清洁能源输出</P>
+      <P>摄影：鲍明亮</P>
+    </div>
+    <P style=" text-indent:2em;">在宜昌城市变迁史上，葛洲坝工程带动了宜昌第一次振兴，使当初城市人口只有11.8 万人、市区面积仅34平方公里的峡江小城一跃成为中等城市。</P>
+    <P style=" text-indent:2em;">葛洲坝和三峡工程的成功建设，是宜昌实现两次腾飞的直接引擎。三峡-葛洲坝交相辉映，有力促进了宜昌旅游业的发展，使之成为宜昌市的重要产业；极大改善了长江航运条件，葛洲坝船闸累计运行54万余闸次，通过客货船舶249余万艘次，安全过往旅客7690余万人次，大力推动了长江经济带发展。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_18.jpg" />
+      <P>魅力葛洲坝</P>
+      <P>摄影：鲍明亮</P>
+    </div>
+    <P style=" text-indent:2em;">如今，宜昌常住人口413.79万、总面积2.1万平方公里，是耀眼的“世界水电名城”。已实现“智能化”转身的葛洲坝，正大步走在创新发展的智慧之路上。这座引领中国水电潮流的老电厂，又将续写“智慧枢纽，美丽电厂”的辉煌。（作者：党莉）
+</P>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

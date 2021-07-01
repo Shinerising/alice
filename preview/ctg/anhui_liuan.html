@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/ah_06.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/ah_12.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/ah_13.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 六安金寨起义</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">1929年5月6日，正值农历立夏节。这个夜晚，立夏节起义在安徽六安金寨县爆发。</P>
+    <P style=" text-indent:2em;">这个立夏夜，诞生了中国工农红军的重要源头——红32师；这个立夏夜，推动了鄂豫皖革命根据地的建立。这是仅次于中央苏区的全国第二大革命根据地；这个立夏夜，“赤帜插城扉”，大别山腹地自此红旗漫卷、赤潮涌动……</P>
+    <P style=" text-indent:2em;">立夏节起义和黄麻起义、六霍起义——三大武装起义，就这样点燃了大别山革命火种。</P>
+    <div class=" nr1_p31 tt4"><img src="images/ah_14.jpg" />
+      <P>六安皋城广场雕塑——《燎原》</P><P>摄影：袁磊</P>
+    </div>
+      </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">燎原星火，生生不息。在六安皋城广场，雕塑《燎原》耸立当中，彰显着六安的红色基因。</P>
+    <P style=" text-indent:2em;">2020年，三峡集团开始在六安开展长江大保护工作。在这块红色土地上，三峡人不断从六安的红色历史中汲取营养，长江大保护的星火已在六安形成“燎原”之势。</P>
+    <P style=" text-indent:2em;">六安地处长江与淮河之间，大别山北麓，淠河是六安的母亲河。近年来，六安城市水环境质量呈现出恶化趋势，不仅造成城区内河黑臭，同时也威胁着淠河的整体水质。</P>
+    <P style=" text-indent:2em;">2019年，三峡集团所属长江环保集团与六安市政府签署合作框架协议，共同推进长江大保护工作，以“四个一体、循环利用”的城市治理新模式，着力解决六安污水处理效能较低、水生态系统脆弱等问题。</P>
+    <div class=" nr1_p31 tt4"><img src="images/ah_15.jpg" />
+      <P>治理后的均河</P><P>摄影：汤伟</P>
+    </div>
+    <P style=" text-indent:2em;">随着长江大保护工作的推进，六安城区的黑臭水体已经得到基本消除。曾经被六安市民称为“臭水沟”的蒋家沟已经改头换面，焕发新颜。河边一座水质净化公园也成为了附近居民的休闲娱乐场所。与蒋家沟一样，六安城区14条内河的水质正在转好，六安内河水清岸绿的美丽画卷正在徐徐展开。</P>
+    <P style=" text-indent:2em;">治理六安的水环境，三峡集团采取了“厂网河”一体的模式，既清理河里的淤泥、绿化岸坡，同时也在管网和污水处理厂上下功夫。目前，三峡集团在六安新建的6座污水处理厂正在加紧施工，其中4座已进入设备安装调试阶段，城区雨污管网完善工程也在同步开展中。</P>
+    <P style=" text-indent:2em;">城镇污水治理一直存在着“重建设轻运维”的弊端，六安的长江大保护则把建设和运维放在同等重要的位置。建设完成之后，三峡集团还将负责将近20年的运维工作，确保项目发挥实效。</P>
+    <div class=" nr1_p31 tt4"><img src="images/ah_16.jpg" />
+      <P>均河畔的花开得正艳</P><P>摄影：汤伟</P>
+    </div>
+    <P style=" text-indent:2em;">现在的六安，就像1929年诞生于六安的那首红色经典歌曲《八月桂花遍地开》唱颂的一样——生态保护旗帜遍插这块红色大地。这座皖西水城正以全新的面貌展现在人们面前，而且将因水而变得更加秀美灵动、充满生机。（作者：陈磊）</P>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

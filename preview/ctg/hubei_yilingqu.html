@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/hub_12.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/hub_31.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/hub_32.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 选址三斗坪</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">盛夏六月，飞跨长江两岸的三峡大坝，正灵活“吐纳”汛期来水。峡江上下，波澜壮阔。</P>
+    <P style=" text-indent:2em;">昔日，这片三斗坪老街所在地，也曾因为一所学校的存在，而书写出一段波澜壮阔的革命历史。</P>
+    <P style=" text-indent:2em;">1938年初，根据抗日战争发展趋势，中共中央长江局民运部长董必武，指示数名中共党员到三斗坪，恢复百年峡江公学的办学，随后，在峡江公学秘密成立中共峡江公学党小组，隶属中共湖北省委。</P>
+    <P style=" text-indent:2em;">国家危难之际，峡江公学党小组组织师生走出校门，分成歌咏、演讲、墙报等小组，教唱救亡曲，演出救亡剧，举办时事座谈会、识字班，动员各界人士和民众有钱出钱、有力出力，支持抗日……</P>
+    <P style=" text-indent:2em;">谁也不曾想，这个曾经默默无闻的小镇，日后会成为蜚声海内外、享誉五大洲的三峡名镇、世界名镇。
+       新中国成立后，为选择确定三峡大坝坝址，毛泽东、周恩来、邓小平、江泽民等党和国家领导人，先后考察过三斗坪镇。经过长期论证，最后选定三斗坪上的中堡岛，为三峡大坝坝址。</P>
+    <P style=" text-indent:2em;">1994年12月14日，三峡工程开工典礼大会在三斗坪举行。时任国务院总理李鹏在开工典礼大会上宣布：当今世界上最大的水利枢纽工程－－长江三峡工程正式开工。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_33.jpg" />
+      <P>三峡工程开工典礼大会</P>
+    </div>
+  </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">时光荏苒，沧桑巨变。</P>
+    <P style=" text-indent:2em;">崛起于西陵峡三斗坪江心小岛——中堡岛上的三峡工程，如今已全面发挥防洪、发电、航运、水资源利用等综合效益，是迄今为止世界上综合效益最广泛的水电工程。</P>
+    <P style=" text-indent:2em;">
+       三峡工程，是长江防洪体系中的关键性骨干工程；防洪，是其首要任务。受惠于三峡工程，长江流域基本形成以堤防为基础、三峡水库为骨干，其他干支流水库、蓄滞洪区、河道整治工程及防洪非工程措施相配套的综合防洪体系。</P>
+    <P style=" text-indent:2em;">
+       从2003年6月1日正式下闸蓄水以来，截至2020年底，三峡工程累计拦洪运用61次，拦洪总量超过1800多亿立方米；2010年、2012年、2020年入库最大洪峰均超过70000立方米每秒，经过水库拦蓄，削减洪峰约40%，极大减轻了长江中下游地区防洪压力。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_34.jpg" />
+      <P>2020年8月22日 三峡大坝泄洪场景</P>
+      <P>摄影：黄正平</P>
+    </div>
+    <P style=" text-indent:2em;">        水力发电，将水的势能转化为电能，是完全清洁的可再生能源。坐拥32台70万千瓦巨型机组，以及2台5万千瓦电源机组的三峡电站，总装机容量2250万千瓦，是我国“西电东送”“南北互供”的骨干电源点，是世界水电制高点，也是中国发展的新地标。</P>
+    <P style=" text-indent:2em;">
+       截至2021年6月23日，三峡电站累计生产优质清洁电能超过14344亿千瓦时，相当于节约标准煤超过4亿吨，减排二氧化碳超过11亿吨，成为我国重要的大型清洁能源生产基地,在助推长江经济带高质量发展的同时，也在优化能源结构，助推“碳达峰 碳中和”目标实现，维护电网安全稳定运行等方面发挥了重要作用。</P>
+    <P style=" text-indent:2em;">
+       从“自古川江不夜航”到“高峡出平湖”，三峡工程蓄水，改善了宜昌至重庆间的川江航道通航条件，改写了长江这条世界第三大河流的水运发展史。截至2021年6月，三峡船闸累计过闸货运量超过16亿吨，有力推动了长江经济带发展。</P>
+    <P style=" text-indent:2em;">
+       三峡升船机，是世界上技术难度最高、规模最大的升船机，试通航以来，一直保持着安全平稳的运行状态，发挥了快速通道的作用。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_35.jpg" />
+      <P>今日川江可夜航</P><P>摄影：黄一木</P>
+    </div>
+    <P style=" text-indent:2em;">       数据显示，三峡库区船舶单位千瓦拖带能力，由建库前的1.5吨，提高到了目前的4至7吨，油耗明显下降。重庆地区水运直接从业人员达15万人，其中近8万人来自三峡库区，水运业及其关联产业吸纳了库区200多万劳动力。</P>
+    <P style=" text-indent:2em;">
+       三峡水库作为我国重要的淡水资源储备库，可发挥保障供水安全、改善下游枯水季水质、优化水资源配置等作用。每年枯水期，三峡水库可为下游补水200多亿立方米。数据显示，截至2020年12月，三峡水库累计为长江中下游补水超过2200天，补水总量2900亿立方米左右，相当于10个鄱阳湖的蓄水量，改善了中下游地区生产、生活和生态用水条件。</P>
+    <P style=" text-indent:2em;">
+       三峡工程运行管理人员，在库坝区开展水污染防治、天然林保护、长江上游水土保持、退耕还林等生态环境保护专项工作，打造三峡生态屏障，确保一江清水向东流。</P>
+    <P style=" text-indent:2em;">
+       通过整治，三峡库区干流水环境质量总体稳定，森林覆盖率逐步提高，迁建城镇绿化面积大幅增加，水土流失面积减少，陆生动物及水生生物，特别是中华鲟、疏花水柏枝等珍稀特有物种得到保护，生态环境质量不断改善。</P>
+    <P style=" text-indent:2em;">
+       2018年4月，习近平总书记在视察三峡工程时指出，三峡工程的成功建成和运转，使多少代中国人开发和利用三峡资源的梦想变为现实，成为改革开放以来我国发展的重要标志。这是我国社会主义制度能够集中力量办大事优越性的典范，是中国人民富于智慧和创造性的典范，是中华民族日益走向繁荣强盛的典范。</P>
+    <P style=" text-indent:2em;">
+       20多年过去，中堡岛上创造“典范”的奋斗足迹已深埋地下，西陵峡坚硬岩体上高耸的钢筋混凝土已沉入江底，曾经泥点飞溅的三峡大坝上，如今已没有千军万马搞建设的壮观场面。</P>
+    <P style=" text-indent:2em;">
+       但这座走过百年风雨沧桑，凝聚着华夏儿女顽强不屈精神的世纪工程，早已为一个崭新的时代，量身定做了精神标尺。（作者：朱静霞）</P>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

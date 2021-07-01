@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/jx_06.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/jx_13.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/jx_14.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 送瘟神</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">新中国成立初期，江西是血吸虫病最严重的省份之一。江西余江县响应党中央“一定要消灭血吸虫病”的号召，用兴修水利、开新沟填旧沟、土埋钉螺等办法，经过两年艰苦奋斗，消灭了血吸虫病。</P>
+    <P style=" text-indent:2em;">1958年6月30日，《人民日报》报道了江西余江消灭血吸虫病的消息。毛泽东主席得知后，欣然命笔，写成了不朽的诗篇《送瘟神二首》。
+</P>
+    <div class=" nr1_p31 tt4"><img src="images/jx_15.jpg" />
+      <P></P>
+    </div>
+    <P style=" text-indent:2em;">       在“送瘟神”精神的鼓舞下，江西全省掀起了防治血吸虫病的热潮，万安县韶口乡就是其中之一。</P>
+    <P style=" text-indent:2em;">韶口乡位于万安县北部的河谷平地，是典型的江南丘陵地貌，水洼、沼泽地多。“当年这里是一大片沼泽，是血吸虫的聚集地。”年近六旬的韶口乡韶口村委会主任郭明回忆道，“最有效的除虫办法是土埋水淹，村里公社就发动老表们修水坝，都是人工挖砂石，再靠肩膀一担担挑过来。”</P>
+    <P style=" text-indent:2em;">筑坝蓄水，根除了血吸虫，万安县在全国血吸虫病防治工作战线上，又插上了一面红旗。</P>
+    <div class=" nr1_p31 tt4"><img src="images/jx_16.jpg" />
+      <P></P>
+    </div>
+    <P style=" text-indent:2em;"> “血吸虫从清末就流行过，只有共产党才能带领我们重整山河、战天斗地送瘟神！”老乡们欢欣鼓舞，“送瘟神水库”因此得名。</P>
+      </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">       时光切换至2021年4月，正是春和景明时节。
+       倏地一声，无人机在江西万安县韶口乡025乡道腾空而起。10秒后，记者从屏幕上看清了眼前这座水库的全貌——Y字形水体，如同三只触角伸向青山之间，水面澄澈如镜。</P>
+    <div class=" nr1_p31 tt4"><img src="images/jx_17.jpg" />
+      <P>送瘟神水库全貌</P><P>摄影：徐强</P>
+    </div>
+    <P style=" text-indent:2em;">       郭明在水库边生活了大半辈子。他知道，再过两个月，水面会漂浮一排排光伏“蓝板板”——三峡集团要在水库建光伏电站，水下养鱼、水上发电。</P>
+    <P style=" text-indent:2em;">
+       昔日水洼变平湖，山涧溪流汇入这片600亩水域，灌溉了农田，涵养了渔业，滋润了“鱼米之乡”的岁岁年年。不久后，它还将孕育一片绿色能源基地。
+</P>
+    <P style=" text-indent:2em;"> “我们在送瘟神水库规划了506亩的渔光互补项目，水面采用漂浮形式光伏发电，水下进行渔业养殖。光伏板可遮阳，减少水面植物光合作用，抑制藻类繁殖，提升水质，还能减少水分蒸发，为鱼类提供良好的生长环境。”三峡新能源万安发电有限公司总经理张鑫说，“这一项目让闲置的水面产生持续收益，帮助农民增收。”
+</P>
+    <P style=" text-indent:2em;">  在万安县韶口乡，三峡集团规划了100兆瓦光伏项目，总用地面积1700亩，包括渔光、农光互补型太阳能光伏发电系统及配套并网设施，采用“一种资源，两种产业”的集约发展模式，实现鱼电、农电“丰收”，巩固万安县脱贫攻坚成果。
+</P>
+    <P style=" text-indent:2em;">三峡集团与江西万安，已牵手同行18载。</P>
+    <P style=" text-indent:2em;"> 自2003年定点扶贫万安县以来，三峡集团累计投入资金近2亿元，配合地方政府，集中力量在万安县开展基础教育、医疗救助、民生改善、产业发展等扶贫工作，使扶贫工作真正成为长效的、利民惠民的“民心工程”，谱写了一曲央企担当、帮扶发展的动人乐章。</P>
+<div class=" nr1_p31 tt4"><img src="images/jx_18.jpg" />
+      <P>革命老区新风貌</P>
+    </div>
+    <P style=" text-indent:2em;">       2018年，万安县实现高质量脱贫摘帽后，三峡集团发挥自身优势，充分挖掘地方新能源资源，协助万安县编制《新能源发展规划》，已完成三峡新能源万安100MW光伏扶贫项目备案及前期工作，项目计划6月底并网发电。</P>
+    <P style=" text-indent:2em;"> 如今，万安县发展的脚步更加自信、坚实，定点扶贫结出的丰硕成果将存留在罗霄山峰峦之间，存留万安县31万百姓的心中。（作者：向珊）</P>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

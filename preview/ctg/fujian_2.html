@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/fj_04.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/fj_05.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/fj_06.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">红色地标解码</div>
+  <div class="nr1_p22 tt8">| 红旗不倒之乡</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">20世纪20年代，中国内忧外患，积贫积弱，福建永定境内兵痞土匪横行，地主豪绅当道，灾祸连年不断，人民生活在水深火热之中。</P>
+    <P style=" text-indent:2em;">1927年10月，中共永定县委根据中共中央“八七”会议精神和中共闽南特委指示，着手准备发动农民武装暴动。</P>
+    <P style=" text-indent:2em;">1928年6月29日，永定暴动正式打响，威震八闽。永定暴动犹如霹雳春雷，拉开了共产党领导下福建农民武装总暴动的序幕，奠定了福建民主革命胜利的基础，开创了福建土地革命的新纪元。 </P>
+    <div class=" nr1_p31 tt4"><img src="images/fj_07.jpg" />
+      <P>永定暴动遗址</P>
+    </div>
+    <P style=" text-indent:2em;">在中国共产党的领导下，永定人民英勇拼搏，前仆后继，从大革命时期到全国解放，坚持革命斗争长达二十多年，是名副其实的“红旗不倒之乡”。</P>
+  </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">新中国成立后，红色精神深深融入永定城乡发展建设的血脉中。</P>
+    <P style=" text-indent:2em;">在永定县汀江干流棉花滩峡谷河段，有一座赫赫有名的电站——棉花滩水电站。追溯历史，棉花滩水电工程建设硕果累累，创造了一个个水电建设的“奇迹” ——它是国内第一批超过百米级的碾压混凝土重力坝，大型地下厂房采用了当时先进的喷锚支护及岩壁吊车梁技术。</P>
+    <P style=" text-indent:2em;">习近平总书记在闽工作时，曾四次视察棉花滩水电站，并留下了“把电站事业发展好，把人民利益维护好，把职工队伍建设好”的殷切嘱托。</P>
+    <P style=" text-indent:2em;">棉花滩工程设计伴随着三峡集团上海院的重生和成长：1956年，上海院就开始对汀江流域水力资源进行普查。1982年，棉花滩水电站被列入国家“六五”期间勘测设计规划重点项目。1983年4月，恢复建院后的上海院开始负责工程的可行性研究报告编制。1984年8月，上海院提出《福建省永定（棉花滩）水电站可行性研究报告》。1990年12月，上海院编制《福建棉花滩水电站工程初步设计报告》。  1997年11月，  上海院编制《福建棉花滩水电站工程建筑物优化专题报告》，并于当年12月通过审定。</P>
+    <div class=" nr1_p31 tt4"><img src="images/fj_08.jpg" />
+      <P>福建汀江查勘</P>
+    </div>
+    <P style=" text-indent:2em;">棉花滩水电站主体工程于1998年4月1日正式开工建设，2001年4月实现第一台机组发电，2001年12月全部机组投入运行。</P>
+    <P style=" text-indent:2em;">在棉花滩水电站初步设计阶段后期，我国兴起并推广RCC筑坝技术。上海院进行了深入研究，最终出台了RCC重力坝加地下厂房的方案。与此同时，在大型地下厂房的设计中也采用了喷锚支护及岩壁吊车梁的先进技术。工程施工先后获得鲁班奖，工程设计曾获部级一等奖、国家级银质奖。</P>
+    <div class=" nr1_p31 tt4"><img src="images/fj_09.jpg" />
+      <P>国内第一批超过百米级的碾压混凝土高坝</P><p>---福建棉花滩水电站</P>
+    </div>
+    <P style=" text-indent:2em;">如今，棉花滩水电站已成为闽西红土地上一颗璀璨的明珠，形成了以发电为主、兼有防洪、航运及水产养殖等综合效益的大型水力枢纽：4台150兆瓦发电机组输送出源源不断的电流，在福建电网系统中担任了重要的调峰调频任务；下游防洪标准由20年一遇提高到50年一遇，有力保障了闽、粤两省数百万人民的生命财产安全。</P>
+    <P style=" text-indent:2em;">电站建设让近4万库区移民从深山僻壤迁出，居住、就业、医疗、交通等条件都更为优越，移民人均可支配收入不断提高，实现了脱贫奔小康。</P>
+    <P style=" text-indent:2em;">数十载风雨兼程， 昔日贫瘠的闽西老区因棉花滩水电站而悄然蝶变， 这里的一草一木见证着建设者们并肩作战的青春岁月， 吟诵着改革创新稳健发展的美好未来。（作者：上海院）</P>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

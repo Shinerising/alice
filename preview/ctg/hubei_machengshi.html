@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/hub_12.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/hub_25.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/hub_26.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 黄麻起义</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">       1927年，湖北黄安（今红安）、麻城地区三万余名农民自卫军和义勇军在党的“八七”会议精神指引下，攻打黄安县城，打响了鄂豫皖地区武装反抗国民党右派的第一枪。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_27.jpg" />
+      <P>黄麻起义</P>
+    </div>
+    <P style=" text-indent:2em;">        革命战争年代，麻城有7.6万人参加红军，14.3万人殉难于战火，登记在册的烈士1.2万人。麻城乘顺地区500多平方公里的土地承载了6000名在册烈士，平均每平方公里多达10位，家家是红属，垸垸有烈士，“青山处处埋忠骨”。</P>
+  </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">曾经红军西征的主阵地，而今成了脱贫攻坚的主战场。</P>
+    <P style=" text-indent:2em;">三峡集团湖北能源新能源公司在麻城运营着阎家河光伏、夫子河光伏、蔡家寨风电3个新能源项目，总投资12.93亿元。通过绿色发展、电力赋能、产业扶贫，在这片红色热土上，奏响了一曲“风光”交响乐。
+</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_28.jpg" />
+      <P></P>
+    </div>
+    <P style=" text-indent:2em;">阎家河光伏电站，位于麻城市阎家河镇蔡家垸村，装机10万千瓦。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_29.jpg" />
+      <P></P>
+    </div>
+    <P style=" text-indent:2em;">夫子河光伏电站，位于麻城市夫子河镇西程塆村和李胜村，装机2万千瓦。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_30.jpg" />
+      <P></P>
+    </div>
+    <P style=" text-indent:2em;">蔡家寨风电场，位于麻城市福田河镇护儿山村，装机5万千瓦。</P>
+    <P style=" text-indent:2em;">厚植绿色发展理念，湖北能源新能源公司高度重视生态保护和修复，认真落实水保、环保“三同时”，严格按照国家标准，对建设扬尘、噪音、废料进行科学处置，不断优化项目建设和管理，打造环境友好型新能源电站设施。目前，麻城“两光一风”项目总规模达到17万千瓦，每年向鄂东电网稳定输送清洁能源2.3亿千瓦时，减少二氧化碳排放 22.9万吨。通过建设精品工程和精心运维，努力让这片红色土地“青山常在、绿水长流、空气常新”。</P>
+    <P style=" text-indent:2em;">湖北能源新能源公司3个项目每年为当地创造3200万元税收，助力革命老区经济社会发展，并通过光伏产业帮扶和示范带动，实现“滴灌”式精准扶贫。</P>
+    <P style=" text-indent:2em;">阎家河光伏电站作为全市样板精准扶贫项目，租用周围村民手中的闲置荒地“变废为宝”，每年支付土地租金240余万元，惠及周边500余户村民。据统计，项目建设期间为当地农民工600余人提供工作岗位，建成后常年招用当地农民30人，主要从事光伏板清洗、设备区除草及安保等工作，对特困户的帮扶效果十分明显。项目建成后，新修的宽阔马路贯通周边5个村落，提高了村民生活质量。为当地光伏产业观光旅游提供支持，公司全年免费对观光区域的光伏设备进行检修维护，定期入村入户讲解清洁能源知识。(作者：李晨 姚爽)</P>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

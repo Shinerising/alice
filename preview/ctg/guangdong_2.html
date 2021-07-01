@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/gd_04.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/gd_05.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/gd_06.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">红色地标解码</div>
+  <div class="nr1_p22 tt8">| 阳江海上风电</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">1978年12月，党的十一届三中全会作出了把党和国家工作中心转移到经济建设上来、实行改革开放的历史性决策。</P>
+    <P style=" text-indent:2em;">中国改革开放的总设计师邓小平支持广东先行先试，率先创办经济特区。改革开放的春风从南粤土地上吹起，被激活的春水在中国版图上澎湃奔腾。从改革开放的伟大实践中孕育出的红色精神也深深地烙印在这片土地的奋斗者身上，他们用开拓创新、勇于担当书写着一个又一个春天的故事……</P>
+    <P style=" text-indent:2em;">地处广东的阳江，是一个拥有丰富海洋资源的海滨城市。御风而行、向海而兴，一群为风电梦想不断奋斗的三峡人如今在这里默默耕耘……</P>
+  </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">       三峡能源阳江沙扒海上风电项目位于广东省阳江市沙扒镇南面海域，共规划五期，总装机容量170万千瓦。该项目是国内首个“百万千瓦级”海上风电基地，为我国海上风电集中连片规模化开发先行先试项目。</P>
+    
+    <div class=" nr1_p31 tt4"><img src="images/gd_07.jpg" />
+      <P></P>
+    </div>
+    <P style=" text-indent:2em;">项目所在海域风大浪急，地质条件复杂，基岩面高低起伏，给项目施工带来了极大的困难。面对挑战，项目团队成员积极探索适应南海海域的新型基础型式，不断优化施工工艺，项目使用的吸力筒导管架、芯柱式嵌岩基础、大直径四桩导管架等多种基础形式均为国内首次。
+</P>
+    <div class=" nr1_p31 tt4"><img src="images/gd_08.jpg" />
+      <P>国内首个大直径四桩导管架基础</P>
+    </div>
+    <div class=" nr1_p31 tt4"><img src="images/gd_09.jpg" />
+      <P>国内单体容量最大海上升压站</P>
+    </div>
+    <div class=" nr1_p31 tt4"><img src="images/gd_10.jpg" />
+      <P>南海海域首个7兆瓦风机</P>
+    </div>
+    <P style=" text-indent:2em;">据估算，阳江海上风电项目建成后每年可提供上网电量47亿千瓦时，可满足约200万户家庭年用电量。与同等规模的燃煤电厂相比，每年可节约标准煤约150万吨、减排二氧化碳约400万吨，将为实现粤港澳大湾区的能源结构转型和“碳达峰、碳中和”目标提供有力支持。</P>
+    <P style=" text-indent:2em;">一座座大风车在辽阔的阳江海域迎风而立。更远处，海上风电正逐渐走向深海远海，走向更灿烂可期的未来。（作者：徐超）</P>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

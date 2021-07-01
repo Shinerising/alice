@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/ah_06.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/ah_07.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/ah_08.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 红色芜湖</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">在中国近代历史上，芜湖是安徽革命运动的主要策源地和发生地，是皖江抗日的主阵地、百万大军渡江的突破地，是一块红色热土。</P>
+    <P style=" text-indent:2em;">1923年1月，中国社会主义青年团芜湖地方执行委员会率先成立，开始领导芜湖的革命运动，并宣传马克思主义。1925年6月，芜湖人民支援由中国共产党领导的五卅运动，罢工罢课罢市，上万人参加游行，查禁英日货品，为烈士家属和上海工人募捐，展现了芜湖人民的爱国热情和革命力量。到1926年4月，芜湖有了自己的早期党组织——中共芜湖特别支部。</P>
+    <div class=" nr1_p31 tt4"><img src="images/ah_09.jpg" />
+      <P>中共芜湖特别支部机关旧址</P><P>（芜湖党史方志网供图）</P>
+    </div>
+      </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">作为一座滨江城市，芜湖襟江带水，它的兴衰与长江紧密相连。自从2018年签订《共抓长江大保护共建绿色发展示范区合作框架协议》以来，三峡集团与芜湖市一道共抓长江大保护，积极开展“五水共治”工作，为芜湖市实现高质量发展提供强有力的生态保障。</P>
+    <P style=" text-indent:2em;">打造江东水生态公园，便是双方共同治水的一个范例。</P>
+    <P style=" text-indent:2em;">江东水生态公园位于芜湖长江大桥引桥下的一块“边角”地带，随着城市快速发展，这块空地变得脏乱不堪，建筑垃圾、污水散排直排随处可见。</P>
+    <div class=" nr1_p31 tt4"><img src="images/ah_10.jpg" />
+      <P>治理前江东桥下的“污泥滩”</P><P>摄影：李旭</P>
+    </div>
+    <P style=" text-indent:2em;">       通过治理，这里建起了潜流人工湿地和强化处理湿地。公园旁边朱家桥污水处理厂的尾水流入公园，通过填料吸附和微生物生化等方式持续净化。公园生态稳定塘则构建了一个动植物微生物共生生态系统， 让水具有了一定的自净能力， 并能够最终流入长江， 实现了“五水共治”目标。
+</P>
+    <div class=" nr1_p31 tt4"><img src="images/ah_11.jpg" />
+      <P>改造后的江东水生态公园蓝绿交织</P><P>摄影：李旭</P>
+    </div>
+    <P style=" text-indent:2em;">水滋养了生物，生物净化了水质。如今，江东水生态公园成了芜湖市民争相前来打卡的“网红”景点。2019年，芜湖成功入围全国第三批黑臭水体治理示范城市。</P>
+    <P style=" text-indent:2em;">真抓实干、成效初显，水清岸绿的美好环境回来了。在三峡人的努力下，这片满载红色记忆的热土将会焕发出更多的蓝绿生机。（作者：吴昱圻）</P>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/xj_04.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/xj_05.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/xj_06.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 屯垦戍边</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">在党的七届二中全会上，王震将军主动请缨进军新疆。</P>
+    <P style=" text-indent:2em;">1949年，王震率第一野战军下属部队进疆，促成新疆和平解放，并根据国家“屯垦戍边”的战略布局，展开了轰轰烈烈的大生产与剿匪活动。</P>
+    <div class=" nr1_p31 tt4"><img src="images/xj_07.jpg" />
+      <P></P>
+    </div>
+    <P style=" text-indent:2em;">新疆远离内地，想要在这站稳脚跟，首先得解决粮食问题。王震率领的部队能长途奔袭，又能打硬仗，还能耕地种田，有着老三五九旅南泥湾大生产的传统，是一支独特的又战斗又生产的劲旅。这样，新疆实现和平解放之后，中央政府组建生产建设兵团，劳武结合，屯垦戍边，新疆经济社会逐步进入稳定发展期。</P>
+  </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">弹指一挥间，半个多世纪过去了，戈壁大漠发生了天翻地覆的变化。昔日的亘古荒原，因三峡人的到来，增添了大好“风光”。</P>
+    <P style=" text-indent:2em;">2012年7月，新疆达坂城风电场一期49.5兆瓦风电项目成功并网。该项目位于乌鲁木齐市东南郊达坂城区柴窝堡东北12公里处，总装机容量4.95万千瓦，共有33台单机容量为1500千瓦风力发电机组，是三峡能源在疆首个并网发电的新能源项目。</P>
+    <div class=" nr1_p31 tt4"><img src="images/xj_08.jpg" />
+      <P>新疆达坂城风电场</P>
+    </div>
+    <P style=" text-indent:2em;"> 三峡能源新疆北塔山新能源电场在距离中蒙边境线仅有50公里的边境之地。这里冰山壮美，雪原辽阔。三峡人在这里扎根成长，建成了共计498兆瓦的风电和光伏项目，成为三峡能源在疆最大新能源电场。</P>
+    <P style=" text-indent:2em;">2013年6月，三峡能源在疆首个光伏项目——皮山一期20兆瓦光伏工程成功并网。同年，三峡能源在疆年发电量突破1亿千瓦时大关。</P>
+    <div class=" nr1_p31 tt4"><img src="images/xj_09.jpg" />
+      <P>三峡能源新疆皮山光伏电站</P>
+    </div>
+    <P style=" text-indent:2em;"> 三峡能源新疆布尔津风电场，拥有目前国内陆上单机容量最大风机。在布尔津风电场建设过程中，三峡人冲破疫情之困，战大风，斗严寒，将不可能变成可能。</P>
+    <div class=" nr1_p31 tt4"><img src="images/xj_10.jpg" />
+      <P>三峡能源新疆布尔津风电场</P>
+    </div>
+    <P style=" text-indent:2em;"> 新疆哈密，是一片天高地远的秀美之地，这里建成了国家能源局特许权项目——新疆哈密20万千瓦风电场。项目的建成对加快产业援疆，促进当地经济社会发展，推动绿色能源开发利用具有重要意义。</P>
+    <P style=" text-indent:2em;">除此之外，三峡能源新疆分公司用实际行动践行央企责任，促进民生保障，对新疆各地经济发展贡献了积极力量—— </P>
+    <P style=" text-indent:2em;"> 向布尔津县政府捐赠资金用于内陆河综合治理工作，捐赠资金对若羌县幸福大院消防进行全面改造，积极推进皮山县木奎拉乡阔纳巴扎村500千瓦光伏电站代运维扶贫项目。（作者：王文静 高琦） </P>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

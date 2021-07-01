@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/hub_12.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/hub_36.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/hub_37.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 革命烈士夏明翰</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">秭归位于湖北省西部，是三峡工程坝上库首第一县。</P>
+    <P style=" text-indent:2em;">秭归也是一片红色的土地，孕育了革命烈士夏明翰。“砍头不要紧，只要主义真。杀了夏明翰，还有后来人。”夏明翰行刑前留下的《就义诗》，激励了无数后来人抛头颅、洒热血，为共产主义事业前赴后继，奋斗终生。</P>
+    <div class=" nr1_p31 tt4" style=" max-width:60%; margin:5% auto;"><img src="images/hub_38.jpg" />
+      <P>夏明翰像（资料照片）  新华社发</P>
+    </div>
+    <P style=" text-indent:2em;">土地革命斗争时期，秭归是巴归兴革命根据地的重要组成部分，无数革命先烈以“掀天揭地换日月、除旧布新扭乾坤”的大无畏英勇气概，与敌人展开了殊死斗争，将鲜血洒在这片土地上。</P>
+    <P style=" text-indent:2em;">在社会主义建设时期，老区人民艰苦奋斗，奋力拼搏， 战穷山治恶水，创下了光辉业绩；舍小家顾大家，为国家建设作出了突出贡献。</P>
+  </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">多年来，三峡集团践行“建好一座电站、带动一方经济、改善一片环境、造福一批移民”的水电开发理念，与秭归开展企地合作、共赢共享。</P>
+    <P style=" text-indent:2em;">秭归县庙河村曾是远近闻名的“深度贫困村”。早年间，村子里的房屋大部分还是瓦房，乡村土路连接着错落散布在山上的住户。</P>
+    <P style=" text-indent:2em;">杜开金是庙河村村民，村民们都习惯叫他老杜。老杜的旧屋，因岁月久远墙皮已大部分脱落,墙上的裂缝也四处可见。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_39.jpg" />
+      <P>杜开金家的老屋</P>
+    </div>
+    <P style=" text-indent:2em;">自从三峡集团派驻驻村工作队以来，三峡人牢记使命，投入帮扶资金进行危房改造。驻村工作队深入每一家每一户了解危房改造需求，认真测量改造面积，最终完成了52户危房改造任务。笑容。</P>
+    <P style=" text-indent:2em;">老杜现在住进敞亮的新家，多年的心病再也没有了。“现在儿子媳妇们都愿意回家过年了，再也不用担心洗澡和上卫生间不方便的问题了。”老杜脸上洋溢着幸福的笑容。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_40.jpg" />
+      <P>杜开金的新房干净明亮</P>
+    </div>
+    <P style=" text-indent:2em;">除了危房改造项目， 三峡集团还实施了庙河村柑橘苗采购项目， 为全村121家农户采购发放柑橘树苗14510棵，增加了庙河村村民收入，巩固了脱贫成果，引导了庙河村产业发展；庙河村一村落居民点环境改善工程，极大地改善了居住的整体环境和安全防护，提升了农民群众生活品质；庙河村脱贫攻坚通畅工程解决了村民看病难、出行难、农副产品输出难，提升了交通通达性和游客便利度，加快了乡村振兴的步伐。</P>
+    <div class=" nr1_p31 tt4"><img src="images/hub_41.jpg" />
+      <P>庙河村的柑橘园</P>
+    </div>
+    <P style=" text-indent:2em;">基础设施大改善、人居环境大变样、扶贫产业大提升，如今的庙河村面貌焕然一新。</P>
+    <P style=" text-indent:2em;">早在两年前，庙河村就圆满完成“村出列、户脱贫”的目标任务。老百姓脱贫了，但巩固脱贫成果的重任还未卸下。未来几年，驻村工作队还将在田间地头，与老杜们拉拉家常，聊一聊致富秘诀。(作者：华小军)</P>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg1 bg4">
+  <div class="head">
+    <div class="logo" style="float:right;"><img src="images/logo.png" /></div>
+    <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+  </div>
+  <div class="nr1_p1 clear">
+    <div class="nr1_p17"><img src="images/jx_01.png"/> 
+      <a href="jiangxi_wanan.html" class="nr1_p171" style="right:65%; bottom:45%;" title="吉安市万安县"><img src="images/jx_02.png"/></a> 
+      <a href="jiangxi_shaokouxiang.html" class="nr1_p172" style="right:0%; left:33%; bottom:36%;" title="吉安市万安县韶口乡"><img src="images/jx_03.png"/></a> 
+    </div>
+    <div class="nr1_p15">
+      <a href="jiangxi_wanan.html" title="吉安市万安县"><img src="images/jx_04.png"/></a> 
+      <a href="jiangxi_shaokouxiang.html" title="吉安市万安县韶口乡"><img src="images/jx_05.png"/></a> 
+
+    </div>
+  </div>
+  <div class="foot tt3"> 中国三峡出版传媒公司<br />
+    出品 </div>
+</div>
+</body>
+</html>

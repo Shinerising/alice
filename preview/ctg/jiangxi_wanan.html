@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/jx_06.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/jx_07.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/jx_08.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 红色万安</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">1927年秋天，中共赣西特委和万安县委确定由曾天宇、张世熙、肖素民等人，负责全县武装暴动的指挥工作。从1927年11月至12月31日，万安农军和革命群众先后三次攻打万安县城，均未破城。1928年1月9日，在吸取前三次攻城的经验教训后，万安农军和群众4万余人，第四次攻打万安县城，终于取得胜利。</P>
+    <div class=" nr1_p31 tt4"><img src="images/jx_09.jpg" />
+      <P>革命烈士曾天宇故乡——万安县罗塘乡村背村</P><P>摄影：徐强</P>
+    </div>
+    <P style=" text-indent:2em;">不久，国民党军队进攻万安红色政权。1928年3月5日晚，敌军出动一个营的兵力，将“万安暴动”领导人曾天宇藏身的房子团团围住。面对围上来的敌人，曾天宇高呼“共产主义万岁”“中国共产党万岁”，将剩下的最后一颗子弹对准自己，扣动扳机。
+</P>
+    <div class=" nr1_p31 tt4"><img src="images/jx_10.jpg" />
+      <P>革命烈士曾天宇故乡——万安县罗塘乡村背村</P><P>摄影：徐强</P>
+    </div>
+      </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">90多年后，在万安县罗塘乡村背村，有一个名叫蒋承峰的年轻人，经常来这里转转。他是三峡集团在万安实施城乡水环境综合治理项目的管理人员。他和他的同事们建设的一处污水处理站就在村背村河畔，距离村头不足200米。</P>
+    <P style=" text-indent:2em;">万安县城区市政污水管网不完善，各乡镇生活污水集中处理尚是空白，污水散排、直排河道现象难绝。</P>
+    <div class=" nr1_p31 tt4"><img src="images/jx_11.jpg" />
+      <P>以前的村背河 河面浮萍泛滥</P><P>摄影：肖荔城</P>
+    </div>
+    <P style=" text-indent:2em;">万安是三峡集团的定点扶贫县。为加快完善革命老区基础设施建设，助力老区乡村振兴，守护一江清水北流，三峡集团在万安开展长江大保护工作，与地方政府合作采用PPP模式建设万安县城乡水环境综合治理项目——一期实施主城西区和18个村镇的污水处理厂站及133公里的配套管网建设，惠及人口8.4万人；二期将实施主城东区以及农村污水治理项目。</P>
+    <P style=" text-indent:2em;">“项目点多、面广，又碰上新冠肺炎疫情，管理难度大，参建各方诉求不一，处理起来比较棘手。”一年前，蒋承峰刚来到万安，现场诸多困难曾让他不太适应。一次偶然的散步，蒋承峰发现，“万安暴动”旧址距离罗塘乡污水处理站仅几步之遥。重温历史，他汲取着前进的智慧和力量：“曾天宇在两个月内带领工农革命军4次攻打万安县城，前三次都失败了，第四次才胜利。干事创业必定经历磨难，没有谁能随便成功。”</P>
+    <P style=" text-indent:2em;">党史是明灯，也是号角。</P>
+    <P style=" text-indent:2em;">2020年2月底，万安长江大保护项目克服新冠肺炎疫情等不利影响，全面有序复工，通过实行“分批出图、分批报审、分批施工”的措施，防疫、生产两手抓、两不误。万安县三峡一期水环境综合治理有限责任公司总经理张勇说，“目前，我们已完成县域内4个乡镇的污水处理站建设，以及27公里的配套管网建设。”</P>
+    <P style=" text-indent:2em;">据张勇介绍，罗塘乡的项目进展最为顺利，污水处理站已进入通水调试阶段，乡集镇污水管网入户接通率达90%。其中，村背新村实现管网入户接通率100%。</P>
+    <P style=" text-indent:2em;">治水先治污，治污先治网。</P>
+    <P style=" text-indent:2em;">两公里的村背河，一头是山村，一头是赣江。以前散排至此的污水，通过新建管网进入罗塘乡污水站处理达标后排放。现在的村背河，已是一幅“江碧鸟逾白，山青花欲燃”的景象——横流的污水变成汩汩清流，村头的水泥乡道宽敞整洁，红色村庄焕发出新的容颜。</P>
+<div class=" nr1_p31 tt4"><img src="images/jx_12.jpg" />
+      <P>污水不再散排、直排 村背河的水又清了</P><P>摄影：向珊</P>
+    </div>
+    <P style=" text-indent:2em;">值得一提的是，在三峡集团多年来定点扶贫的大力帮扶下，万安县已于2018年实现整体脱贫摘帽目标；2019年，双方提出“脱贫攻坚+生态建设”精准扶贫创新模式。以长江大保护业务为抓手，推进万安县污水治理产业升级，已就“江西省长江大保护——赣江最美岸线（万安段）示范项目”建设达成共识，一期项目4.85亿元已签订协议开始实施，为当地生态建设提供坚实的基础。（作者：向珊）
+</P>
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/run.js"></script>
+<title>中国三峡集团</title>
+</head>
+<body>
+<!--背景音乐-->
+<audio id="bg-music" src="images/music.mp3" autoplay="autoplay" loop="loop" controls="controls"  style="display:none;"></audio>
+<script>
+// DOM中的内容加载完毕之后，调用函数
+document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+ 
+function musicInWeixinHandler() {
+    musicPlay(true);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        musicPlay(true);
+    }, false);
+    document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+ 
+function musicPlay(isPlay) {
+    var media = document.querySelector('#bg-music');
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+</script>
+<!--<div id="music">
+  <audio id="myAudio" autoplay="autoplay">
+    <source src="images/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio src="images/music2.mp3" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>-->
+<div id="container">
+<div class="bg6">
+  <div class="bg5"><img src="images/bg5.jpg" />
+    <div class="head">
+      <div class="logo" style="float:right;"><img src="images/logo2.png" /></div>
+      <div class="top tt1" style=" float:left;"><a href="javascript:history.go(-1)">返回</a></div>
+      <div class="clear hj2"></div>
+      <div  class="pp1"><img src="images/sc_06.png" /></div>
+    </div>
+    <div  class="nr1_p2"><img src="images/sc_07.png" /></div>
+  </div>
+  <div class="pp2 cc"><img src="images/sc_08.jpg" width="75%" /></div>
+  <div class="nr1_p21 tt9 pp2">重温红色记忆</div>
+  <div class="nr1_p22 tt8">| 四川凉山</div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;">四川凉山——风有故事，光有传奇，熊熊燃烧着不灭的红色火种。</P>
+    <P style=" text-indent:2em;">红军长征二万五千里，在川行程一万五千里。蜀道之难，难于上青天，但最终都被踩成了红军脚下的“泥丸”。在这里，红军彝海结盟过凉山，谱写了一曲多民族合力制胜的凯歌；在这里，红军强渡大渡河，飞夺泸定桥；在这里，红军翻越了几十座大山，包括人迹罕至、终年积雪的雪山，数次挑战人类生理极限……</P>
+    <div class=" nr1_p31 tt4"><img src="images/sc_09.jpg" />
+      <P></P>
+    </div>
+  </div>
+  <div class="pp2"><img src="images/tbg4.png" /></div>
+  <div class="nr1_p3 tt6">
+    <P style=" text-indent:2em;"> 奔腾不息的金沙江，滋养了沿江两岸世代繁衍生息的百姓。然而，在金沙江穿流而过的众多地区中，凉山州因特殊的历史、自然、文化等多重因素交织，成为全国深度贫困的“三区三州”之一。</P>
+    <P style=" text-indent:2em;"> 三峡能源西南分公司凉山党支部就扎根在平均海拔3200—3600米的大凉山区。这里有着三峡集团海拔最高的风电和光伏项目。一群可爱的三峡人，像矗立的风机和光伏板一样，扎根在高原，不惧严寒与艰险，探索智能运维，展示“风光”的魅力——</P>
+    <P style=" text-indent:2em;"> 这里一年一场风，从春刮到冬，高高矗立的风机隐没在浓厚的云层中，正像曾经的红军战士一样，驻守着这片土地。</P>
+    <div class=" nr1_p31 tt4"><img src="images/sc_10.jpg" />
+      <P></P>
+    </div>
+    <P style=" text-indent:2em;"> 这里一天一片光，从头晒到脚，蓝色的光伏板绵延伸展，如同一片湛蓝的大海，让原本的荒芜大地源源不断地输送出清洁能源。 </P>
+    <div class=" nr1_p31 tt4"><img src="images/sc_11.jpg" />
+      <P></P>
+    </div>
+    <P style=" text-indent:2em;">       他们以绿色低碳助力地方经济发展：截至目前，三峡能源已在凉山州投运新能源电站7座，为普格县、布拖县等深度贫困地区脱贫摘帽作出了积极贡献；</P>
+    <P style=" text-indent:2em;">       他们以行动解决民生之困：先后直接向凉山州会理县、普格县和布拖县等地区的困难中小学生、村民捐赠资金用于道路修建或教育帮扶等，树立了负责任央企的良好形象……（作者：饶芯榕）
+</P>
+
+  </div>
+  <div  class="fbg1">
+    <div class="foot tt3"> 中国三峡出版传媒公司<br />
+      出品 </div>
+  </div>
+</div>
+</body>
+</html>
