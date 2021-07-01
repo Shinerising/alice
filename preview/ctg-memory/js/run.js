@@ -1,5 +1,5 @@
 let linkCheck = (link) => {
-  if (link.endsWith('/index.html') || link == link.endsWith('/')) {
+  if (link.endsWith('/index.html') || link.endsWith('/')) {
     startLoading();
   }
   if (link.endsWith('/index1.html')) {
