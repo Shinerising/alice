@@ -1,10 +1,202 @@
 [
   {
-    "name": "main",
-    "path": "main.jpg",
+    "name": "background",
+    "path": "background.jpg",
     "x": 0,
     "y": 0,
     "width": 38976,
     "height": 2008
+  },
+  {
+    "name": "cloud01",
+    "path": "cloud01.png",
+    "x": 3543,
+    "y": 191,
+    "width": 9363,
+    "height": 1137
+  },
+  {
+    "name": "mountain01",
+    "path": "mountain01.png",
+    "x": 3794,
+    "y": 119,
+    "width": 35200,
+    "height": 1591
+  },
+  {
+    "name": "stone01",
+    "path": "stone01.png",
+    "x": 6759,
+    "y": 860,
+    "width": 28029,
+    "height": 1148
+  },
+  {
+    "name": "title01",
+    "path": "title01.png",
+    "x": 640,
+    "y": 0,
+    "width": 1710,
+    "height": 2008
+  },
+  {
+    "name": "sanxia",
+    "path": "sanxia.png",
+    "x": 16305,
+    "y": 45,
+    "width": 5436,
+    "height": 1963
+  },
+  {
+    "name": "splash01",
+    "path": "splash01.png",
+    "x": 17985,
+    "y": 1216,
+    "width": 762,
+    "height": 351
+  },
+  {
+    "name": "splash02",
+    "path": "splash01.png",
+    "x": 17985,
+    "y": 1226,
+    "width": 762,
+    "height": 351
+  },
+  {
+    "name": "splash03",
+    "path": "splash01.png",
+    "x": 18005,
+    "y": 1236,
+    "width": 762,
+    "height": 351
+  },
+  {
+    "name": "splash04",
+    "path": "splash01.png",
+    "x": 17985,
+    "y": 1246,
+    "width": 762,
+    "height": 351
+  },
+  {
+    "name": "splash05",
+    "path": "splash01.png",
+    "x": 18105,
+    "y": 1256,
+    "width": 762,
+    "height": 351
+  },
+  {
+    "name": "pin_sh",
+    "path": "pin-sh.png",
+    "x": 3587,
+    "y": 711,
+    "width": 270,
+    "height": 439
+  },
+  {
+    "name": "pin_yb",
+    "path": "pin-yb.png",
+    "x": 24931,
+    "y": 302,
+    "width": 253,
+    "height": 459
+  },
+  {
+    "name": "pin_cq",
+    "path": "pin-cq.png",
+    "x": 21894,
+    "y": 155,
+    "width": 273,
+    "height": 458
+  },
+  {
+    "name": "pin_yc",
+    "path": "pin-yc.png",
+    "x": 13091,
+    "y": 418,
+    "width": 250,
+    "height": 455
+  },
+  {
+    "name": "pin_cjk",
+    "path": "pin-cjk.png",
+    "x": 4646,
+    "y": 764,
+    "width": 254,
+    "height": 415
+  },
+  {
+    "name": "pin_jy",
+    "path": "pin-jy.png",
+    "x": 5592,
+    "y": 757,
+    "width": 245,
+    "height": 400
+  },
+  {
+    "name": "pin_jd",
+    "path": "pin-jd.png",
+    "x": 6294,
+    "y": 615,
+    "width": 249,
+    "height": 417
+  },
+  {
+    "name": "pin_nj",
+    "path": "pin-nj.png",
+    "x": 7056,
+    "y": 771,
+    "width": 245,
+    "height": 407
+  },
+  {
+    "name": "pin_whu",
+    "path": "pin-whu.png",
+    "x": 7951,
+    "y": 758,
+    "width": 225,
+    "height": 390
+  },
+  {
+    "name": "pin_aq",
+    "path": "pin-aq.png",
+    "x": 8858,
+    "y": 565,
+    "width": 242,
+    "height": 476
+  },
+  {
+    "name": "pin_jj",
+    "path": "pin-jj.png",
+    "x": 9369,
+    "y": 693,
+    "width": 219,
+    "height": 408
+  },
+  {
+    "name": "pin_wh",
+    "path": "pin-wh.png",
+    "x": 10090,
+    "y": 544,
+    "width": 223,
+    "height": 463
+  },
+  {
+    "name": "pin_clj",
+    "path": "pin-clj.png",
+    "x": 11004,
+    "y": 826,
+    "width": 243,
+    "height": 417
+  },
+  {
+    "name": "pin_jl",
+    "path": "pin-jl.png",
+    "x": 10727,
+    "y": 701,
+    "width": 216,
+    "height": 402
   }
 ]

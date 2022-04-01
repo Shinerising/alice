@@ -3,30 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
-    <title>Document</title>
+    <title>长江珍稀鱼类图卷 - 中国三峡</title>
+    <script>
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        }
+        else{
+            document.location = 'landscape.html';
+        }
+    </script>
+    <style>
+        body{
+            margin:0;
+            position:relative;
+        }
+        #iframe-main{
+            position:fixed;
+            width: 100vh;
+            height: 100vw;
+            border: none;
+            position: absolute;
+            top: calc(50vh - 50vw);
+            left: calc(50vw - 50vh);
+            border:none;
+            transform:rotate(90deg);
+            transform-origin:center center;
+        }
+    </style>
 </head>
 <body>
-    <div class="container" id="container-main">
-        <div class="canvas" id="canvas-main">
-            <g-lyr class="layer-background">
-                <g-grp class="group-sky">
-                    <g-ele data-id="main"></g-ele>
-                </g-grp>
-            </g-lyr>
-            <g-lyr class="layer-foreground">
-                <div class="group-grass">
-    
-                </div>
-            </g-lyr>
-        </div>
-    </div>
-    <aside hidden>
-
-    </aside>
-    
+    <iframe id="iframe-main" src="landscape.html"></iframe>
 </body>
 </html>

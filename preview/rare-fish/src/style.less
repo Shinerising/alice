@@ -1,0 +1,326 @@
+* {
+    user-select: none;
+}
+
+html {
+    background-color: rgb(53, 181, 198);
+    ;
+    background-image: linear-gradient(to bottom, rgb(47, 219, 203), rgb(45, 171, 191));
+}
+
+body {
+    margin: 0;
+    font-size: 1.4rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+#container-main {
+    position: relative;
+    height: 100vh;
+}
+
+#canvas-main {
+    position: relative;
+    overflow: hidden;
+}
+
+.element {
+    position: absolute;
+}
+
+.trg-slidedown {
+    height: 0;
+    overflow: hidden;
+    transition: height .8s 1s;
+}
+
+.trg-slidedown.active {
+    height: 100vh;
+}
+
+.trg-pindrop.active {
+    transform-origin: center 90%;
+    animation: ani-pindrop 0.8s ease-in both;
+}
+
+@keyframes ani-pindrop {
+    0% {
+        transform: translate(0, -40vh);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translate(0, 0) rotate(20deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(0, 0) rotate(-12deg);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translate(0, 0) rotate(6deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.ani-splash {
+    animation: ani-splash 1s linear infinite;
+}
+
+.ani-delay(@i) when(@i > 0) {
+    .ani-delay-@{i}, .ani-delay-@{i}.active {
+        animation-delay: (@i / 10 + 0s);
+    }
+
+    .ani-delay((@i - 1));
+}
+
+.ani-delay(20);
+
+@keyframes ani-splash {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-5vh, 6vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+#canvas-main.loading {
+    filter: blur(2vh);
+}
+
+/*#region Overlay*/
+#overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+#overlay::before,
+#overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2vw;
+    min-width: 15px;
+    height: 100%;
+    transition: opacity .2s;
+}
+
+#overlay.head::before {
+    opacity: 0;
+}
+
+#overlay.tail::after {
+    opacity: 0;
+}
+
+#overlay::before {
+    left: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .25), transparent);
+}
+
+#overlay::after {
+    right: 0;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, .25), transparent);
+}
+
+.indicator-slide {
+    position: absolute;
+    right: 0;
+    top: 40vh;
+    transition: opacity .5s;
+    pointer-events: none;
+}
+
+.indicator-slide.hidden {
+    opacity: 0;
+}
+
+.arrow-title {
+    width: 32vh;
+    height: 5vh;
+    font-size: 4vh;
+    line-height: 5vh;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 0 0 2vh rgb(12, 121, 183);
+}
+
+.arrow-box {
+    position: relative;
+    width: 20vh;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .arrow-sliding {
+        position: relative;
+        animation: slide 4s linear infinite both;
+    }
+
+    .arrow-sliding::before {
+        content: '';
+        position: absolute;
+        width: 5vh;
+        height: 5vh;
+        border: 2.5vh solid;
+        border-radius: .5vh;
+        border-color: rgba(32, 184, 232, .9) transparent transparent rgba(32, 184, 232, .9);
+        transform: rotate(-45deg);
+    }
+
+    .arrow-sliding:nth-child(1) {
+        animation-delay: 1s;
+    }
+
+    .arrow-sliding:nth-child(2) {
+        animation-delay: 2s;
+    }
+
+    .arrow-sliding:nth-child(3) {
+        animation-delay: 3s;
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateX(15vh);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(9vh);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(-9vh);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-15vh);
+    }
+}
+
+/*#endregion*/
+
+/*#region Loading Navigation*/
+#nav-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .25);
+
+
+    .loading-panel {
+        position: relative;
+        color: #a73605;
+        font-size: min(5vh, 18px);
+        padding: 1em 2em;
+        text-align: center;
+        background-color: rgba(255, 255, 255, .9);
+        background-image: linear-gradient(to bottom right, #fee68e, #edce9d);
+        box-shadow: 0 0 2em rgba(0, 0, 0, .5);
+        border-radius: 1em;
+    }
+
+    .loading-title {
+        margin-top: .5em;
+        margin-bottom: .5em;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .loading-count {
+        height: 2em;
+        line-height: 2em;
+        font-size: 1.6em;
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .loading-count.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .loading-button {
+        margin-top: -2em;
+        height: 2em;
+        font-size: 1.6em;
+        transition: opacity .5s;
+    }
+
+    .loading-button.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .loading-button>button {
+        background-image: linear-gradient(to bottom, #375c9d, #244784);
+        color: white;
+        border: .2em solid #3199bb;
+        border-radius: .5em;
+        font-size: .6em;
+        padding: .5em 1em;
+        cursor: pointer;
+        transition: border .2s, background .2s;
+    }
+
+    .loading-button>button:hover {
+        border-color: #59b3d0;
+        background-image: linear-gradient(to bottom, #5279bd, #476daf);
+    }
+
+    .loading-button>button:active {
+        background-image: linear-gradient(to bottom, #1c396c, #0f2a58);
+    }
+
+    .loading-info {
+        font-size: .8em;
+        margin-top: 1em;
+    }
+}
+
+#nav-loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.2, 1.2);
+    transition: transform .5s, opacity .5s;
+}
+
+/*#endregion Loading Navigation*/
