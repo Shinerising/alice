@@ -1,64 +1,293 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
     <title>长江珍稀鱼类图卷 - 中国三峡</title>
 </head>
+
 <body>
+    <audio id="bgm" hidden loop autoplay></audio>
     <div class="container" id="container-main">
         <div class="canvas loading" id="canvas-main">
             <div class="layer-background">
                 <div class="group-background">
                     <div class="element" data-id="background"></div>
                 </div>
-                <div class="group-sky" data-sccfx="-2000">
-                    <div class="element" data-id="cloud01"></div>
+                <div class="group-backcloud" data-sccfx="-2000">
+                    <div class="element" data-id="cloud"></div>
                 </div>
                 <div class="group-mountain" data-sccfx="-1000">
                     <div class="element" data-id="mountain01"></div>
+                    <div class="element" data-id="mountain02"></div>
+                    <div class="element" data-id="mountain03"></div>
+                </div>
+                <div class="group-tail">
+                    <div class="element" data-id="tail"></div>
+                </div>
+                <div class="group-head">
+                    <div class="element" data-id="head"></div>
+                    <div class="element" data-id="head_mountain"></div>
+                    <div class="element ani-fish" data-id="head_fish" data-ani="instant"></div>
+                </div>
+                <div class="group-misc">
+                    <div class="element" data-id="misc_bubble"></div>
+                    <div class="element" data-id="misc_fish"></div>
+                    <div class="element" data-id="misc_lotus"></div>
+                    <div class="element" data-id="misc_flower"></div>
+                </div>
+                <div class="group-cloud">
+                    <div class="element ani-cloud" data-id="cloud01" data-ani="instant"></div>
+                    <div class="element ani-cloud" data-id="cloud02" data-ani="instant"></div>
+                    <div class="element ani-cloud" data-id="cloud03" data-ani="instant"></div>
+                    <div class="element ani-cloud" data-id="cloud04" data-ani="instant"></div>
+                    <div class="element ani-cloud" data-id="cloud05" data-ani="instant"></div>
                 </div>
             </div>
             <div class="layer-scene">
-                <div class="group-sanxia">
-                    <div class="element" data-id="sanxia"></div>
-                    <div class="element ani-splash ani-splash-sanxia" data-id="splash01" data-ani="instant"></div>
-                    <div class="element ani-splash ani-splash-sanxia ani-delay-2" data-id="splash02" data-ani="instant"></div>
-                    <div class="element ani-splash ani-splash-sanxia ani-delay-4" data-id="splash03" data-ani="instant"></div>
-                    <div class="element ani-splash ani-splash-sanxia ani-delay-6" data-id="splash04" data-ani="instant"></div>
-                    <div class="element ani-splash ani-splash-sanxia ani-delay-8" data-id="splash05" data-ani="instant"></div>
+                <div class="group-field">
+                    <div class="element" data-id="field_sh"></div>
+                    <div class="element" data-id="field_nj"></div>
+                    <div class="element" data-id="field_wh"></div>
                 </div>
-            </div>
-            <div class="layer-text">
-                <div class="group-title">
-                    <div class="element trg-slidedown" data-id="title01" data-trg="scrollin"></div>
+                <div class="group-gzb">
+                    <div class="element" data-id="gzb_mountain"></div>
+                    <div class="element" data-id="gzb_dam"></div>
                 </div>
-                <div class="group-pin">
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_sh" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_aq" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_cjk" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_clj" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_cq" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_jd" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_jj" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_jl" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_jy" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_nj" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_wh" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_whu" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_yb" data-trg="scrollin"></div>
-                    <div class="element trg-pindrop ani-delay-2" data-id="pin_yc" data-trg="scrollin"></div>
+                <div class="group-sx">
+                    <div class="element" data-id="sx_mountain"></div>
+                    <div class="element" data-id="sx_dam"></div>
+                    <div class="element ani-damcloud" data-id="sx_cloud" data-ani="instant"></div>
+                </div>
+                <div class="group-yb">
+                    <div class="element" data-id="yb_mountain1"></div>
+                    <div class="element" data-id="yb_mountain2"></div>
+                    <div class="element ani-damcloud" data-id="yb_cloud" data-ani="instant"></div>
+                </div>
+                <div class="group-xjb">
+                    <div class="element" data-id="xjb_mountain"></div>
+                    <div class="element" data-id="xjb_dam"></div>
+                    <div class="element ani-damcloud" data-id="xjb_cloud" data-ani="instant"></div>
+                </div>
+                <div class="group-xld">
+                    <div class="element" data-id="xld_mountain"></div>
+                    <div class="element" data-id="xld_dam"></div>
+                </div>
+                <div class="group-bht">
+                    <div class="element" data-id="bht_mountain"></div>
+                    <div class="element" data-id="bht_dam"></div>
+                    <div class="element" data-id="bht_kyj"></div>
+                </div>
+                <div class="group-wdd">
+                    <div class="element" data-id="wdd_mountain"></div>
+                    <div class="element" data-id="wdd_dam"></div>
+                    <div class="element ani-damcloud" data-id="wdd_cloud" data-ani="instant"></div>
+                </div>
+                <div class="group-splash">
+                    <div class="group-splash-sx">
+                        <div class="element ani-splash ani-splash-sx" data-id="splash_sx" data-ani="instant"></div>
+                        <div class="element ani-splash ani-splash-sx ani-delay-4" data-id="splash_sx" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-sx ani-delay-8" data-id="splash_sx" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-sx ani-delay-12" data-id="splash_sx" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-sx ani-delay-16" data-id="splash_sx" data-ani="instant">
+                        </div>
+                    </div>
+                    <div class="group-splash-gzb">
+                        <div class="element ani-splash ani-splash-gzb" data-id="splash_gzb" data-ani="instant"></div>
+                        <div class="element ani-splash ani-splash-gzb ani-delay-4" data-id="splash_gzb" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-gzb ani-delay-8" data-id="splash_gzb" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-gzb ani-delay-12" data-id="splash_gzb" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-gzb ani-delay-16" data-id="splash_gzb" data-ani="instant">
+                        </div>
+                    </div>
+                    <div class="group-splash-xjb">
+                        <div class="element ani-splash ani-splash-xjb" data-id="splash_xjb" data-ani="instant"></div>
+                        <div class="element ani-splash ani-splash-xjb ani-delay-4" data-id="splash_xjb" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-xjb ani-delay-8" data-id="splash_xjb" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-xjb ani-delay-12" data-id="splash_xjb" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-xjb ani-delay-16" data-id="splash_xjb" data-ani="instant">
+                        </div>
+                    </div>
+                    <div class="group-splash-xld">
+                        <div class="element ani-splash ani-splash-xld" data-id="splash_xld" data-ani="instant"></div>
+                        <div class="element ani-splash ani-splash-xld ani-delay-4" data-id="splash_xld" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-xld ani-delay-8" data-id="splash_xld" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-xld ani-delay-12" data-id="splash_xld" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-xld ani-delay-16" data-id="splash_xld" data-ani="instant">
+                        </div>
+                    </div>
+                    <div class="group-splash-bht">
+                        <div class="element ani-splash ani-splash-bht" data-id="splash_bht" data-ani="instant"></div>
+                        <div class="element ani-splash ani-splash-bht ani-delay-4" data-id="splash_bht" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-bht ani-delay-8" data-id="splash_bht" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-bht ani-delay-12" data-id="splash_bht" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-bht ani-delay-16" data-id="splash_bht" data-ani="instant">
+                        </div>
+                    </div>
+                    <div class="group-splash-wdd">
+                        <div class="element ani-splash ani-splash-wdd" data-id="splash_wdd" data-ani="instant"></div>
+                        <div class="element ani-splash ani-splash-wdd ani-delay-4" data-id="splash_wdd" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-wdd ani-delay-8" data-id="splash_wdd" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-wdd ani-delay-12" data-id="splash_wdd" data-ani="instant">
+                        </div>
+                        <div class="element ani-splash ani-splash-wdd ani-delay-16" data-id="splash_wdd" data-ani="instant">
+                        </div>
+                    </div>
+                </div>
+                <div class="group-fish">
+
+                    <div class="element trg-rotatein " data-id="fish_jiangtun" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein-r" data-id="fish_caoyu" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein-r ori-b" data-id="fish_yongyu" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein-r ori-b" data-id="fish_yanzhiyu" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein-r" data-id="fish_changjiangxun" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein-r ori-t" data-id="fish_qingyu" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein-r ori-b" data-id="fish_houhefang" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein-r ori-t" data-id="fish_baixun" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein-r ori-b" data-id="fish_yuanyanli" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein-r" data-id="fish_changjiwenju" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein ori-t" data-id="fish_changboqiu" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein-r" data-id="fish_luli" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein ori-l" data-id="fish_lianyu" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein" data-id="fish_zhonghuaxun" data-trg="scrollin" data-with></div>
+                    <div class="element trg-rotatein ori-l" data-id="fish_tongkouyuanyu" data-trg="scrollin" data-with></div>
+
+                    <div class="element trg-fadein-s" data-id="spray_cy" data-trg="fish_caoyu"></div>
+                    <div class="element trg-fadein-s" data-id="spray_jt" data-trg="fish_jiangtun"></div>
+                    <div class="element trg-fadein-s" data-id="spray_ly" data-trg="fish_lianyu"></div>
+                    <div class="element trg-fadein-s" data-id="spray_zhx" data-trg="fish_zhonghuaxun"></div>
+                    <div class="element trg-fadein-s" data-id="spray_yy" data-trg="fish_yongyu"></div>
+                    <div class="element trg-fadein-s" data-id="spray_qy" data-trg="fish_qingyu"></div>
+                    <div class="element trg-fadein-s" data-id="spray_cjx" data-trg="fish_changjiangxun"></div>
+                    <div class="element trg-fadein-s" data-id="spray_hhf" data-trg="fish_houhefang"></div>
+                    <div class="element trg-fadein-s" data-id="spray_yyl" data-trg="fish_yuanyanli"></div>
+                    <div class="element trg-fadein-s" data-id="spray_cqwj" data-trg="fish_changjiwenju"></div>
+                    <div class="element trg-fadein-s" data-id="spray_cbq" data-trg="fish_changboqiu"></div>
+                    <div class="element trg-fadein-s" data-id="spray_ll" data-trg="fish_luli"></div>
+                    <div class="element trg-fadein-s" data-id="spray_ykty" data-trg="fish_tongkouyuanyu"></div>
+
+                    <div class="element trg-slidedown-s" data-id="fishname_jt" data-trg="fish_jiangtun"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_cy" data-trg="fish_caoyu"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_yy" data-trg="fish_yongyu"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_yzy" data-trg="fish_yanzhiyu"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_cjx" data-trg="fish_changjiangxun"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_qy" data-trg="fish_qingyu"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_hhf" data-trg="fish_houhefang"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_bx" data-trg="fish_baixun"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_yyl" data-trg="fish_yuanyanli"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_cjwj" data-trg="fish_changjiwenju"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_cbq" data-trg="fish_changboqiu"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_ll" data-trg="fish_luli"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_ly" data-trg="fish_lianyu"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_zhx" data-trg="fish_zhonghuaxun"></div>
+                    <div class="element trg-slidedown-s" data-id="fishname_ykty" data-trg="fish_tongkouyuanyu"></div>
                 </div>
             </div>
             <div class="layer-foreground">
+                <div class="group-leaves">
+                    <div class="element" data-id="leaves"></div>
+                    <div class="element ani-leaves ani-delay-l-2" data-id="leaf" data-ani="instant"></div>
+                    <div class="element ani-leaves ani-delay-l-8" data-id="leaf" data-ani="instant"></div>
+                    <div class="element ani-leaves ani-delay-l-4" data-id="leaf" data-ani="instant"></div>
+                    <div class="element ani-leaves ani-delay-l-10" data-id="leaf" data-ani="instant"></div>
+                    <div class="element ani-leaves ani-delay-l-6" data-id="leaf" data-ani="instant"></div>
+                </div>
                 <div class="group-stone" data-sccfx="1000">
-                    <div class="element" data-id="stone01"></div>
+                    <div class="element" data-id="stone_nj"></div>
+                    <div class="element" data-id="stone_sx"></div>
+                    <div class="element" data-id="stone_xld"></div>
+                </div>
+                <div class="group-spray" data-sccfx="2000">
+                    <div class="element" data-id="spray0"></div>
+                    <div class="element" data-id="spray1"></div>
+                    <div class="element" data-id="spray2"></div>
+                    <div class="element" data-id="spray3"></div>
+                    <div class="element" data-id="spray4"></div>
+                    <div class="element" data-id="spray5"></div>
+                    <div class="element" data-id="spray6"></div>
+                </div>
+            </div>
+            <div class="layer-text">
+                <div class="group-title" data-sccfx="4000">
+                    <div class="element trg-slidedown-l trs-delay-6" data-id="title" data-trg="scrollin"></div>
+                </div>
+                <div class="group-tailtext">
+                    <div class="element trg-text-rtl trs-delay-16" data-id="tailtext" data-trg="scrollin"></div>
+                </div>
+                <div class="group-pin">
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_sh" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_aq" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_cjk" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_clj" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_cq" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_jd" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_jj" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_jl" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_jy" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_nj" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_wh" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_whu" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_yb" data-trg="scrollin"></div>
+                    <div class="element trg-pindrop ani-delay-16" data-id="pin_yc" data-trg="scrollin"></div>
+                </div>
+                <div class="group-label">
+                    <div class="element trg-zoomin-left" data-id="label_sx" data-trg="scrollin"></div>
+                    <div class="element trg-zoomin-left" data-id="label_wdd" data-trg="scrollin"></div>
+                    <div class="element trg-zoomin-right" data-id="label_xjb" data-trg="scrollin"></div>
+                    <div class="element trg-zoomin-right" data-id="label_yc" data-trg="scrollin"></div>
+                    <div class="element trg-zoomin-right" data-id="label_gzb" data-trg="scrollin"></div>
+                    <div class="element trg-zoomin-left" data-id="label_zhx" data-trg="scrollin"></div>
+                </div>
+                <div class="group-name">
+                    <div class="element trg-slidedown" data-id="name_bht" data-trg="scrollin"></div>
+                    <div class="element trg-slidedown" data-id="name_sx" data-trg="scrollin"></div>
+                    <div class="element trg-slidedown" data-id="name_gzb" data-trg="scrollin"></div>
+                    <div class="element trg-slidedown" data-id="name_wdd" data-trg="scrollin"></div>
+                    <div class="element trg-slidedown" data-id="name_xjb" data-trg="scrollin"></div>
+                    <div class="element trg-slidedown" data-id="name_xld" data-trg="scrollin"></div>
+                </div>
+                <div class="group-text">
+                    <div class="element ani-textcloud" data-id="textcloud_sh" data-ani="instant"></div>
+                    <div class="element ani-textcloud" data-id="textcloud_yc" data-ani="instant"></div>
+                    <div class="element ani-textcloud" data-id="textcloud_sy" data-ani="instant"></div>
+                    <div class="element ani-textcloud" data-id="textcloud_hsh" data-ani="instant"></div>
+
+                    <div class="element trg-fadein" data-id="text_sh" data-trg="scrollin"></div>
+                    <div class="element trg-fadein" data-id="text_yc" data-trg="scrollin"></div>
+                    <div class="element trg-fadein" data-id="text_sy" data-trg="scrollin"></div>
+                    <div class="element trg-fadein" data-id="text_hsh" data-trg="scrollin"></div>
+                </div>
+                <div class="group-logo">
+                    <div class="element ani-shine" data-id="logo" data-ani="instant"></div>
                 </div>
             </div>
         </div>
@@ -73,7 +302,7 @@
                 <div class="arrow-sliding"></div>
                 <div class="arrow-sliding"></div>
                 <div class="arrow-sliding"></div>
-              </div>
+            </div>
         </nav>
     </div>
     <nav id="nav-loading">
@@ -85,7 +314,13 @@
                 <span>0%</span>
             </div>
             <div class="loading-button hidden">
-                <button>点击开始</button>
+                <button>开始浏览</button>
+            </div>
+            <div class="loading-refresh hidden">
+                <button>刷新页面</button>
+            </div>
+            <div class="loading-autoplay hidden">
+                <button>自动播放</button>
             </div>
             <div class="loading-info">
                 <span>请启用屏幕锁定并将设备横置<br>以获得更好的浏览体验。</span>
@@ -93,4 +328,5 @@
         </div>
     </nav>
 </body>
+
 </html>

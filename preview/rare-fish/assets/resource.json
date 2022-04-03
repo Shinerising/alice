@@ -1,202 +1,1120 @@
-[
-  {
-    "name": "background",
-    "path": "background.jpg",
-    "x": 0,
-    "y": 0,
-    "width": 38976,
-    "height": 2008
-  },
-  {
-    "name": "cloud01",
-    "path": "cloud01.png",
-    "x": 3543,
-    "y": 191,
-    "width": 9363,
-    "height": 1137
-  },
-  {
-    "name": "mountain01",
-    "path": "mountain01.png",
-    "x": 3794,
-    "y": 119,
-    "width": 35200,
-    "height": 1591
-  },
-  {
-    "name": "stone01",
-    "path": "stone01.png",
-    "x": 6759,
-    "y": 860,
-    "width": 28029,
-    "height": 1148
-  },
-  {
-    "name": "title01",
-    "path": "title01.png",
-    "x": 640,
-    "y": 0,
-    "width": 1710,
-    "height": 2008
-  },
-  {
-    "name": "sanxia",
-    "path": "sanxia.png",
-    "x": 16305,
-    "y": 45,
-    "width": 5436,
-    "height": 1963
-  },
-  {
-    "name": "splash01",
-    "path": "splash01.png",
-    "x": 17985,
-    "y": 1216,
-    "width": 762,
-    "height": 351
-  },
-  {
-    "name": "splash02",
-    "path": "splash01.png",
-    "x": 17985,
-    "y": 1226,
-    "width": 762,
-    "height": 351
-  },
-  {
-    "name": "splash03",
-    "path": "splash01.png",
-    "x": 18005,
-    "y": 1236,
-    "width": 762,
-    "height": 351
-  },
-  {
-    "name": "splash04",
-    "path": "splash01.png",
-    "x": 17985,
-    "y": 1246,
-    "width": 762,
-    "height": 351
-  },
-  {
-    "name": "splash05",
-    "path": "splash01.png",
-    "x": 18105,
-    "y": 1256,
-    "width": 762,
-    "height": 351
-  },
-  {
-    "name": "pin_sh",
-    "path": "pin-sh.png",
-    "x": 3587,
-    "y": 711,
-    "width": 270,
-    "height": 439
-  },
-  {
-    "name": "pin_yb",
-    "path": "pin-yb.png",
-    "x": 24931,
-    "y": 302,
-    "width": 253,
-    "height": 459
-  },
-  {
-    "name": "pin_cq",
-    "path": "pin-cq.png",
-    "x": 21894,
-    "y": 155,
-    "width": 273,
-    "height": 458
-  },
-  {
-    "name": "pin_yc",
-    "path": "pin-yc.png",
-    "x": 13091,
-    "y": 418,
-    "width": 250,
-    "height": 455
-  },
-  {
-    "name": "pin_cjk",
-    "path": "pin-cjk.png",
-    "x": 4646,
-    "y": 764,
-    "width": 254,
-    "height": 415
-  },
-  {
-    "name": "pin_jy",
-    "path": "pin-jy.png",
-    "x": 5592,
-    "y": 757,
-    "width": 245,
-    "height": 400
-  },
-  {
-    "name": "pin_jd",
-    "path": "pin-jd.png",
-    "x": 6294,
-    "y": 615,
-    "width": 249,
-    "height": 417
-  },
-  {
-    "name": "pin_nj",
-    "path": "pin-nj.png",
-    "x": 7056,
-    "y": 771,
-    "width": 245,
-    "height": 407
-  },
-  {
-    "name": "pin_whu",
-    "path": "pin-whu.png",
-    "x": 7951,
-    "y": 758,
-    "width": 225,
-    "height": 390
-  },
-  {
-    "name": "pin_aq",
-    "path": "pin-aq.png",
-    "x": 8858,
-    "y": 565,
-    "width": 242,
-    "height": 476
-  },
-  {
-    "name": "pin_jj",
-    "path": "pin-jj.png",
-    "x": 9369,
-    "y": 693,
-    "width": 219,
-    "height": 408
-  },
-  {
-    "name": "pin_wh",
-    "path": "pin-wh.png",
-    "x": 10090,
-    "y": 544,
-    "width": 223,
-    "height": 463
-  },
-  {
-    "name": "pin_clj",
-    "path": "pin-clj.png",
-    "x": 11004,
-    "y": 826,
-    "width": 243,
-    "height": 417
-  },
-  {
-    "name": "pin_jl",
-    "path": "pin-jl.png",
-    "x": 10727,
-    "y": 701,
-    "width": 216,
-    "height": 402
-  }
-]
+{
+  "music" : "./music/bgm.mp3",
+  "width": 42520,
+  "height": 2008,
+  "origin": "./images/ldpi/",
+  "elements": [
+    {
+      "name": "background",
+      "path": "background.jpg",
+      "x": 0,
+      "y": 0,
+      "width": 38976,
+      "height": 2008
+    },
+    {
+      "name": "cloud01",
+      "path": "cloud01.png",
+      "x": 3794,
+      "y": 318,
+      "width": 5329,
+      "height": 574
+    },
+    {
+      "name": "cloud02",
+      "path": "cloud02.png",
+      "x": 11706,
+      "y": 194,
+      "width": 4447,
+      "height": 572
+    },
+    {
+      "name": "cloud03",
+      "path": "cloud03.png",
+      "x": 21217,
+      "y": 142,
+      "width": 4215,
+      "height": 468
+    },
+    {
+      "name": "cloud04",
+      "path": "cloud04.png",
+      "x": 31488,
+      "y": 149,
+      "width": 3344,
+      "height": 622
+    },
+    {
+      "name": "cloud05",
+      "path": "cloud05.png",
+      "x": 18336,
+      "y": 194,
+      "width": 1696,
+      "height": 324
+    },
+    {
+      "name": "mountain01",
+      "path": "mountain01.png",
+      "x": 19681,
+      "y": 311,
+      "width": 13180,
+      "height": 867
+    },
+    {
+      "name": "mountain02",
+      "path": "mountain02.png",
+      "x": 3481,
+      "y": 119,
+      "width": 15652,
+      "height": 1591
+    },
+    {
+      "name": "mountain03",
+      "path": "mountain03.png",
+      "x": 33823,
+      "y": 238,
+      "width": 5153,
+      "height": 801
+    },
+    {
+      "name": "cloud",
+      "path": "cloud.png",
+      "x": 3543,
+      "y": 191,
+      "width": 9363,
+      "height": 1137
+    },
+    {
+      "name": "title",
+      "path": "title.png",
+      "x": 640,
+      "y": 0,
+      "width": 1710,
+      "height": 2008
+    },
+    {
+      "name": "pin_sh",
+      "path": "pin-sh.png",
+      "x": 3587,
+      "y": 711,
+      "width": 270,
+      "height": 439
+    },
+    {
+      "name": "pin_yb",
+      "path": "pin-yb.png",
+      "x": 24931,
+      "y": 302,
+      "width": 253,
+      "height": 459
+    },
+    {
+      "name": "pin_cq",
+      "path": "pin-cq.png",
+      "x": 21894,
+      "y": 155,
+      "width": 273,
+      "height": 458
+    },
+    {
+      "name": "pin_yc",
+      "path": "pin-yc.png",
+      "x": 13091,
+      "y": 418,
+      "width": 250,
+      "height": 455
+    },
+    {
+      "name": "pin_cjk",
+      "path": "pin-cjk.png",
+      "x": 4646,
+      "y": 764,
+      "width": 254,
+      "height": 415
+    },
+    {
+      "name": "pin_jy",
+      "path": "pin-jy.png",
+      "x": 5592,
+      "y": 757,
+      "width": 245,
+      "height": 400
+    },
+    {
+      "name": "pin_jd",
+      "path": "pin-jd.png",
+      "x": 6294,
+      "y": 615,
+      "width": 249,
+      "height": 417
+    },
+    {
+      "name": "pin_nj",
+      "path": "pin-nj.png",
+      "x": 7056,
+      "y": 771,
+      "width": 245,
+      "height": 407
+    },
+    {
+      "name": "pin_whu",
+      "path": "pin-whu.png",
+      "x": 7951,
+      "y": 758,
+      "width": 225,
+      "height": 390
+    },
+    {
+      "name": "pin_aq",
+      "path": "pin-aq.png",
+      "x": 8858,
+      "y": 565,
+      "width": 242,
+      "height": 476
+    },
+    {
+      "name": "pin_jj",
+      "path": "pin-jj.png",
+      "x": 9369,
+      "y": 693,
+      "width": 219,
+      "height": 408
+    },
+    {
+      "name": "pin_wh",
+      "path": "pin-wh.png",
+      "x": 10090,
+      "y": 544,
+      "width": 223,
+      "height": 463
+    },
+    {
+      "name": "pin_clj",
+      "path": "pin-clj.png",
+      "x": 11004,
+      "y": 826,
+      "width": 243,
+      "height": 417
+    },
+    {
+      "name": "pin_jl",
+      "path": "pin-jl.png",
+      "x": 10727,
+      "y": 701,
+      "width": 216,
+      "height": 402
+    },
+    {
+      "name": "leaves",
+      "path": "leaves.png",
+      "x": 2469,
+      "y": 0,
+      "width": 1105,
+      "height": 620
+    },
+    {
+      "name": "leaf",
+      "path": "leaf.png",
+      "x": 2937,
+      "y": -50,
+      "width": 75,
+      "height": 91,
+      "rdm_x": 300,
+      "rdm_y": 50
+    },
+    {
+      "name": "logo",
+      "path": "logo.png",
+      "x": 200,
+      "y": 170,
+      "width": 578,
+      "height": 150
+    },
+    {
+      "name": "stone_nj",
+      "path": "stone_nj.png",
+      "x": 6759,
+      "y": 1291,
+      "width": 5306,
+      "height": 717
+    },
+    {
+      "name": "stone_sx",
+      "path": "stone_sx.png",
+      "x": 18553,
+      "y": 1136,
+      "width": 4483,
+      "height": 872
+    },
+    {
+      "name": "stone_xld",
+      "path": "stone_xld.png",
+      "x": 29182,
+      "y": 866,
+      "width": 5216,
+      "height": 1142
+    },
+    {
+      "name": "spray0",
+      "path": "spray0.png",
+      "x": 3527,
+      "y": 1659,
+      "width": 2544,
+      "height": 349
+    },
+    {
+      "name": "spray1",
+      "path": "spray1.png",
+      "x": 18150,
+      "y": 1838,
+      "width": 957,
+      "height": 170
+    },
+    {
+      "name": "spray2",
+      "path": "spray2.png",
+      "x": 7217,
+      "y": 1564,
+      "width": 2745,
+      "height": 444
+    },
+    {
+      "name": "spray3",
+      "path": "spray3.png",
+      "x": 12435,
+      "y": 1497,
+      "width": 3608,
+      "height": 511
+    },
+    {
+      "name": "spray4",
+      "path": "spray4.png",
+      "x": 27715,
+      "y": 1758,
+      "width": 2589,
+      "height": 250
+    },
+    {
+      "name": "spray5",
+      "path": "spray5.png",
+      "x": 33032,
+      "y": 1702,
+      "width": 2716,
+      "height": 306
+    },
+    {
+      "name": "spray6",
+      "path": "spray6.png",
+      "x": 21452,
+      "y": 324,
+      "width": 4146,
+      "height": 1684
+    },
+    {
+      "name": "fishname_jt",
+      "path": "fishname_jt.png",
+      "x": 7783,
+      "y": 342,
+      "width": 147,
+      "height": 512
+    },
+    {
+      "name": "fishname_cy",
+      "path": "fishname_cy.png",
+      "x": 9753,
+      "y": 94,
+      "width": 149,
+      "height": 519
+    },
+    {
+      "name": "fishname_yy",
+      "path": "fishname_yy.png",
+      "x": 13912,
+      "y": 66,
+      "width": 137,
+      "height": 479
+    },
+    {
+      "name": "fishname_yzy",
+      "path": "fishname_yzy.png",
+      "x": 22672,
+      "y": 74,
+      "width": 143,
+      "height": 514
+    },
+    {
+      "name": "fishname_cjx",
+      "path": "fishname_cjx.png",
+      "x": 25735,
+      "y": 1110,
+      "width": 141,
+      "height": 508
+    },
+    {
+      "name": "fishname_qy",
+      "path": "fishname_qy.png",
+      "x": 16443,
+      "y": 1206,
+      "width": 142,
+      "height": 494
+    },
+    {
+      "name": "fishname_hhf",
+      "path": "fishname_hhf.png",
+      "x": 29377,
+      "y": 70,
+      "width": 149,
+      "height": 534
+    },
+    {
+      "name": "fishname_bx",
+      "path": "fishname_bx.png",
+      "x": 21871,
+      "y": 1002,
+      "width": 184,
+      "height": 664
+    },
+    {
+      "name": "fishname_yyl",
+      "path": "fishname_yyl.png",
+      "x": 30571,
+      "y": 804,
+      "width": 144,
+      "height": 518
+    },
+    {
+      "name": "fishname_cjwj",
+      "path": "fishname_cjwj.png",
+      "x": 32596,
+      "y": 63,
+      "width": 152,
+      "height": 546
+    },
+    {
+      "name": "fishname_cbq",
+      "path": "fishname_cbq.png",
+      "x": 34622,
+      "y": 1282,
+      "width": 143,
+      "height": 515
+    },
+    {
+      "name": "fishname_ll",
+      "path": "fishname_ll.png",
+      "x": 35114,
+      "y": 67,
+      "width": 145,
+      "height": 520
+    },
+    {
+      "name": "fishname_ly",
+      "path": "fishname_ly.png",
+      "x": 10597,
+      "y": 1312,
+      "width": 145,
+      "height": 507
+    },
+    {
+      "name": "fishname_zhx",
+      "path": "fishname_zhx.png",
+      "x": 11320,
+      "y": 506,
+      "width": 143,
+      "height": 498
+    },
+    {
+      "name": "fishname_ykty",
+      "path": "fishname_ykty.png",
+      "x": 38098,
+      "y": 1230,
+      "width": 148,
+      "height": 561
+    },
+    {
+      "name": "spray_cy",
+      "path": "spray_cy.png",
+      "x": 7253,
+      "y": 651,
+      "width": 549,
+      "height": 577
+    },
+    {
+      "name": "spray_jt",
+      "path": "spray_jt.png",
+      "x": 9417,
+      "y": 336,
+      "width": 361,
+      "height": 587
+    },
+    {
+      "name": "spray_ly",
+      "path": "spray_ly.png",
+      "x": 10717,
+      "y": 1204,
+      "width": 390,
+      "height": 636
+    },
+    {
+      "name": "spray_zhx",
+      "path": "spray_zhx.png",
+      "x": 11420,
+      "y": 1032,
+      "width": 762,
+      "height": 501
+    },
+    {
+      "name": "spray_yy",
+      "path": "spray_yy.png",
+      "x": 13456,
+      "y": 193,
+      "width": 430,
+      "height": 402
+    },
+    {
+      "name": "spray_qy",
+      "path": "spray_qy.png",
+      "x": 15784,
+      "y": 1270,
+      "width": 653,
+      "height": 612
+    },
+    {
+      "name": "spray_cjx",
+      "path": "spray_cjx.png",
+      "x": 24970,
+      "y": 942,
+      "width": 899,
+      "height": 905
+    },
+    {
+      "name": "spray_hhf",
+      "path": "spray_hhf.png",
+      "x": 29752,
+      "y": 145,
+      "width": 538,
+      "height": 386
+    },
+    {
+      "name": "spray_yyl",
+      "path": "spray_yyl.png",
+      "x": 30816,
+      "y": 1091,
+      "width": 655,
+      "height": 372
+    },
+    {
+      "name": "spray_cqwj",
+      "path": "spray_cqwj.png",
+      "x": 32888,
+      "y": 161,
+      "width": 412,
+      "height": 801
+    },
+    {
+      "name": "spray_cbq",
+      "path": "spray_cbq.png",
+      "x": 34182,
+      "y": 1568,
+      "width": 502,
+      "height": 279
+    },
+    {
+      "name": "spray_ll",
+      "path": "spray_ll.png",
+      "x": 34705,
+      "y": 321,
+      "width": 574,
+      "height": 674
+    },
+    {
+      "name": "spray_ykty",
+      "path": "spray_ykty.png",
+      "x": 37724,
+      "y": 994,
+      "width": 357,
+      "height": 778
+    },
+    {
+      "name": "fish_jiangtun",
+      "path": "fish_jiangtun.png",
+      "x": 7363,
+      "y": 691,
+      "width": 399,
+      "height": 583
+    },
+    {
+      "name": "fish_caoyu",
+      "path": "fish_caoyu.png",
+      "x": 9245,
+      "y": 138,
+      "width": 430,
+      "height": 576
+    },
+    {
+      "name": "fish_yongyu",
+      "path": "fish_yongyu.png",
+      "x": 13292,
+      "y": 259,
+      "width": 582,
+      "height": 292
+    },
+    {
+      "name": "fish_yanzhiyu",
+      "path": "fish_yanzhiyu.png",
+      "x": 22837,
+      "y": 227,
+      "width": 614,
+      "height": 345
+    },
+    {
+      "name": "fish_changjiangxun",
+      "path": "fish_changjiangxun.png",
+      "x": 25252,
+      "y": 1046,
+      "width": 646,
+      "height": 815
+    },
+    {
+      "name": "fish_qingyu",
+      "path": "fish_qingyu.png",
+      "x": 15801,
+      "y": 1405,
+      "width": 581,
+      "height": 335
+    },
+    {
+      "name": "fish_houhefang",
+      "path": "fish_houhefang.png",
+      "x": 29553,
+      "y": 239,
+      "width": 684,
+      "height": 333
+    },
+    {
+      "name": "fish_baixun",
+      "path": "fish_baixun.png",
+      "x": 20780,
+      "y": 1131,
+      "width": 1066,
+      "height": 459
+    },
+    {
+      "name": "fish_yuanyanli",
+      "path": "fish_yuanyanli.png",
+      "x": 30736,
+      "y": 1089,
+      "width": 752,
+      "height": 496
+    },
+    {
+      "name": "fish_changjiwenju",
+      "path": "fish_changjiwenju.png",
+      "x": 32809,
+      "y": 67,
+      "width": 350,
+      "height": 627
+    },
+    {
+      "name": "fish_changboqiu",
+      "path": "fish_changboqiu.png",
+      "x": 34032,
+      "y": 1501,
+      "width": 534,
+      "height": 309
+    },
+    {
+      "name": "fish_luli",
+      "path": "fish_luli.png",
+      "x": 34635,
+      "y": 329,
+      "width": 602,
+      "height": 503
+    },
+    {
+      "name": "fish_lianyu",
+      "path": "fish_lianyu.png",
+      "x": 10660,
+      "y": 1504,
+      "width": 429,
+      "height": 428
+    },
+    {
+      "name": "fish_zhonghuaxun",
+      "path": "fish_zhonghuaxun.png",
+      "x": 11404,
+      "y": 890,
+      "width": 540,
+      "height": 559
+    },
+    {
+      "name": "fish_tongkouyuanyu",
+      "path": "fish_tongkouyuanyu.png",
+      "x": 37500,
+      "y": 1146,
+      "width": 556,
+      "height": 792
+    },
+    {
+      "name": "textcloud_sh",
+      "path": "textcloud_sh.png",
+      "x": 3305,
+      "y": 1279,
+      "width": 3276,
+      "height": 534,
+      "opacity": 0.70
+    },
+    {
+      "name": "text_sh",
+      "path": "text_sh.png",
+      "x": 3744,
+      "y": 1262,
+      "width": 2081,
+      "height": 405
+    },
+    {
+      "name": "textcloud_yc",
+      "path": "textcloud_yc.png",
+      "x": 10695,
+      "y": 1488,
+      "width": 3276,
+      "height": 520,
+      "opacity": 0.70
+    },
+    {
+      "name": "text_yc",
+      "path": "text_yc.png",
+      "x": 11707,
+      "y": 1533,
+      "width": 1411,
+      "height": 323
+    },
+    {
+      "name": "textcloud_sy",
+      "path": "textcloud_sy.png",
+      "x": 21027,
+      "y": 1038,
+      "width": 3926,
+      "height": 806,
+      "opacity": 0.70
+    },
+    {
+      "name": "text_sy",
+      "path": "text_sy.png",
+      "x": 23031,
+      "y": 1225,
+      "width": 1998,
+      "height": 573
+    },
+    {
+      "name": "textcloud_hsh",
+      "path": "textcloud_hsh.png",
+      "x": 34491,
+      "y": 990,
+      "width": 2218,
+      "height": 277,
+      "opacity": 0.70
+    },
+    {
+      "name": "text_hsh",
+      "path": "text_hsh.png",
+      "x": 34672,
+      "y": 1073,
+      "width": 864,
+      "height": 162
+    },
+    {
+      "name": "name_bht",
+      "path": "name_bht.png",
+      "x": 34314,
+      "y": 329,
+      "width": 231,
+      "height": 1087
+    },
+    {
+      "name": "name_sx",
+      "path": "name_sx.png",
+      "x": 16816,
+      "y": 164,
+      "width": 231,
+      "height": 891
+    },
+    {
+      "name": "name_gzb",
+      "path": "name_gzb.png",
+      "x": 14690,
+      "y": 471,
+      "width": 230,
+      "height": 886
+    },
+    {
+      "name": "name_wdd",
+      "path": "name_wdd.png",
+      "x": 37137,
+      "y": 172,
+      "width": 224,
+      "height": 1057
+    },
+    {
+      "name": "name_xjb",
+      "path": "name_xjb.png",
+      "x": 27165,
+      "y": 274,
+      "width": 218,
+      "height": 1024
+    },
+    {
+      "name": "name_xld",
+      "path": "name_xld.png",
+      "x": 32062,
+      "y": 277,
+      "width": 220,
+      "height": 1037
+    },
+    {
+      "name": "label_sx",
+      "path": "label_sx.png",
+      "x": 20356,
+      "y": 112,
+      "width": 1385,
+      "height": 876
+    },
+    {
+      "name": "label_wdd",
+      "path": "label_wdd.png",
+      "x": 35729,
+      "y": 192,
+      "width": 1044,
+      "height": 777
+    },
+    {
+      "name": "label_xjb",
+      "path": "label_xjb.png",
+      "x": 25856,
+      "y": 92,
+      "width": 929,
+      "height": 697
+    },
+    {
+      "name": "label_yc",
+      "path": "label_yc.png",
+      "x": 14718,
+      "y": 63,
+      "width": 941,
+      "height": 721
+    },
+    {
+      "name": "label_gzb",
+      "path": "label_gzb.png",
+      "x": 11733,
+      "y": 219,
+      "width": 1262,
+      "height": 746
+    },
+    {
+      "name": "label_zhx",
+      "path": "label_zhx.png",
+      "x": 3850,
+      "y": 268,
+      "width": 823,
+      "height": 470
+    },
+    {
+      "name": "field_sh",
+      "path": "field_sh.png",
+      "x": 3543,
+      "y": 1048,
+      "width": 2530,
+      "height": 474
+    },
+    {
+      "name": "field_nj",
+      "path": "field_nj.png",
+      "x": 5458,
+      "y": 648,
+      "width": 3213,
+      "height": 1062
+    },
+    {
+      "name": "field_wh",
+      "path": "field_wh.png",
+      "x": 5632,
+      "y": 772,
+      "width": 5565,
+      "height": 1047
+    },
+    {
+      "name": "tailtext",
+      "path": "tailtext.png",
+      "x": 39614,
+      "y": 131,
+      "width": 1828,
+      "height": 932
+    },
+    {
+      "name": "tail",
+      "path": "tail.png",
+      "x": 37963,
+      "y": 0,
+      "width": 4557,
+      "height": 2008
+    },
+    {
+      "name": "head",
+      "path": "head.png",
+      "x": 0,
+      "y": 0,
+      "width": 3786,
+      "height": 2008
+    },
+    {
+      "name": "head_fish",
+      "path": "head_fish.png",
+      "x": 0,
+      "y": 367,
+      "width": 2994,
+      "height": 1596
+    },
+    {
+      "name": "head_mountain",
+      "path": "head_mountain.png",
+      "x": 0,
+      "y": 13,
+      "width": 4640,
+      "height": 1839
+    },
+    {
+      "name": "gzb_dam",
+      "path": "gzb_dam.png",
+      "x": 12981,
+      "y": 1234,
+      "width": 1963,
+      "height": 378
+    },
+    {
+      "name": "gzb_mountain",
+      "path": "gzb_mountain.png",
+      "x": 11431,
+      "y": 404,
+      "width": 6019,
+      "height": 1604
+    },
+    {
+      "name": "sx_dam",
+      "path": "sx_dam.png",
+      "x": 16497,
+      "y": 1002,
+      "width": 4930,
+      "height": 927
+    },
+    {
+      "name": "sx_cloud",
+      "path": "sx_cloud.png",
+      "x": 17390,
+      "y": 296,
+      "width": 2831,
+      "height": 739
+    },
+    {
+      "name": "sx_mountain",
+      "path": "sx_mountain.png",
+      "x": 16305,
+      "y": 45,
+      "width": 5282,
+      "height": 1963
+    },
+    {
+      "name": "yb_cloud",
+      "path": "yb_cloud.png",
+      "x": 22208,
+      "y": 554,
+      "width": 2853,
+      "height": 450
+    },
+    {
+      "name": "yb_mountain1",
+      "path": "yb_mountain1.png",
+      "x": 20974,
+      "y": 441,
+      "width": 2350,
+      "height": 967
+    },
+    {
+      "name": "yb_mountain2",
+      "path": "yb_mountain2.png",
+      "x": 22810,
+      "y": 620,
+      "width": 2909,
+      "height": 1138
+    },
+    {
+      "name": "xjb_cloud",
+      "path": "xjb_cloud.png",
+      "x": 26205,
+      "y": 251,
+      "width": 4158,
+      "height": 1463
+    },
+    {
+      "name": "xjb_dam",
+      "path": "xjb_dam.png",
+      "x": 26054,
+      "y": 1293,
+      "width": 3028,
+      "height": 713
+    },
+    {
+      "name": "xjb_mountain",
+      "path": "xjb_mountain.png",
+      "x": 26008,
+      "y": 561,
+      "width": 4627,
+      "height": 1447
+    },
+    {
+      "name": "xld_dam",
+      "path": "xld_dam.png",
+      "x": 30870,
+      "y": 614,
+      "width": 1313,
+      "height": 360
+    },
+    {
+      "name": "xld_mountain",
+      "path": "xld_mountain.png",
+      "x": 29969,
+      "y": 364,
+      "width": 2453,
+      "height": 930
+    },
+    {
+      "name": "bht_kyj",
+      "path": "bht_kyj.png",
+      "x": 32698,
+      "y": 748,
+      "width": 220,
+      "height": 157
+    },
+    {
+      "name": "bht_dam",
+      "path": "bht_dam.png",
+      "x": 32298,
+      "y": 788,
+      "width": 2195,
+      "height": 552
+    },
+    {
+      "name": "bht_mountain",
+      "path": "bht_mountain.png",
+      "x": 32074,
+      "y": 489,
+      "width": 3474,
+      "height": 1156
+    },
+    {
+      "name": "wdd_cloud",
+      "path": "wdd_cloud.png",
+      "x": 35309,
+      "y": 55,
+      "width": 3667,
+      "height": 1566
+    },
+    {
+      "name": "wdd_dam",
+      "path": "wdd_dam.png",
+      "x": 34892,
+      "y": 881,
+      "width": 3356,
+      "height": 1127
+    },
+    {
+      "name": "wdd_mountain",
+      "path": "wdd_mountain.png",
+      "x": 35452,
+      "y": 313,
+      "width": 3125,
+      "height": 1267
+    },
+    {
+      "name": "splash_gzb",
+      "path": "splash_gzb.png",
+      "x": 13828,
+      "y": 1294,
+      "width": 792,
+      "height": 155
+    },
+    {
+      "name": "splash_xld",
+      "path": "splash_xld.png",
+      "x": 31421,
+      "y": 686,
+      "width": 405,
+      "height": 139
+    },
+    {
+      "name": "splash_bht",
+      "path": "splash_bht.png",
+      "x": 33140,
+      "y": 928,
+      "width": 665,
+      "height": 174
+    },
+    {
+      "name": "splash_wdd",
+      "path": "splash_wdd.png",
+      "x": 36435,
+      "y": 1395,
+      "width": 738,
+      "height": 257
+    },
+    {
+      "name": "splash_xjb",
+      "path": "splash_xjb.png",
+      "x": 27195,
+      "y": 1475,
+      "width": 753,
+      "height": 157
+    },
+    {
+      "name": "splash_sx",
+      "path": "splash_sx.png",
+      "x": 17802,
+      "y": 1202,
+      "width": 1039,
+      "height": 238,
+      "rdm_x": 100,
+      "rdm_y": 50
+    },
+    {
+      "name": "misc_flower",
+      "path": "misc_flower.png",
+      "x": 2760,
+      "y": 1719,
+      "width": 1271,
+      "height": 289
+    },
+    {
+      "name": "misc_bubble",
+      "path": "misc_bubble.png",
+      "x": 51,
+      "y": 1241,
+      "width": 6689,
+      "height": 715
+    },
+    {
+      "name": "misc_lotus",
+      "path": "misc_lotus.png",
+      "x": 2424,
+      "y": 1509,
+      "width": 2044,
+      "height": 367
+    },
+    {
+      "name": "misc_fish",
+      "path": "misc_fish.png",
+      "x": 3648,
+      "y": 1483,
+      "width": 2683,
+      "height": 406
+    }
+  ]
+}

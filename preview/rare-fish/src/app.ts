@@ -1,7 +1,5 @@
-import { Element } from './element.interface';
+import { Resource, Element } from './element.interface';
 import { DOM, Util } from './common';
-import { rejects } from 'assert';
-import { domainToASCII } from 'url';
 
 HTMLElement.prototype.addClass = function (className: string) {
   if (!this.classList.contains(className)) {
@@ -23,33 +21,77 @@ HTMLElement.prototype.toggleClass = function (className: string) {
 };
 
 export class App {
-  private prefix: string = './images/';
-  private width:number = 38976;
-  private height:number = 2008;
+  private width: number = 38976;
+  private height: number = 2008;
+  private isTail:boolean = false;
 
-  constructor(){
+  constructor() {
   }
 
   public async start() {
     await this.waitDocumentReady();
+    const resource = await this.getResource();
+
+    this.width = resource.width;
+    this.height = resource.height;
+
     this.initialCanvasSize();
-    const elementResource = await this.getElementResource();
-    const result = await this.applyResource(elementResource);
+    const result = await this.applyResource(resource);
 
     if (result) {
       await Util.timeout(500);
       this.enableStartButton();
-    } else{
 
+      //await Util.timeout(2000);
+      //this.enableAutoPlayButton();
+    } else {
+      this.showErrorMessage();
     }
   }
 
+  private showErrorMessage() {
+    DOM.query('.loading-title').textContent = '资源加载失败！请您尝试刷新页面。';
+    DOM.query('.loading-count').addClass('hidden');
+    DOM.query('.loading-refresh').removeClass('hidden');
+    DOM.query('.loading-refresh').onclick = async () => {
+      location.reload();
+    }
+  }
+
+  private setMusic() {
+    const audio = DOM.query('#bgm') as HTMLAudioElement;
+    if (audio.paused) {
+      try{
+        audio.currentTime = 0;
+        audio.volume = .2;
+        audio.play();
+      }
+      catch{
+
+      }
+    } else {
+      audio.currentTime = 0;
+      audio.volume = .2;
+    }
+  }
+
+  private playMusic() {
+    const func = () => { 
+      document.removeEventListener('touchstart', func);
+
+      const audio = DOM.query('#bgm') as HTMLAudioElement;
+      audio.volume = 0;
+      audio.play();
+    };
+    document.addEventListener('touchstart', func, false);
+  }
+
   private toggleFullScreen() {
-    if(!document.documentElement.requestFullscreen){
+    if (!document.documentElement.requestFullscreen) {
       return;
     }
     if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
+      document.documentElement.requestFullscreen();
     } else {
       if (document.exitFullscreen) {
         document.exitFullscreen();
@@ -57,9 +99,37 @@ export class App {
     }
   }
 
-  private enableStartButton(){
+  private enableAutoPlayButton() {
+    const button = DOM.query('.loading-autoplay');
+    button.onclick = async () => {
+      button.addClass('hidden');
+      DOM.query('.loading-button').click();
+
+      await Util.timeout(5000);
+      this.startAutoPlayInterval();
+    }
+    button.removeClass('hidden');
+  }
+
+  private startAutoPlayInterval(){
+    const id = setInterval(() => {
+      if (!this.isTail) {
+        window.scrollBy({
+          top: 0,
+          left: 10,
+          behavior: 'smooth'
+        });
+      } else {
+        clearInterval(id);
+      }
+    }, 10);
+  }
+
+  private enableStartButton() {
     const panel = DOM.query('#nav-loading');
     const button = DOM.query('.loading-button');
+    const title = DOM.query('.loading-title');
+    title.textContent = '媒体资源加载成功！';
     button.onclick = async () => {
       //this.toggleFullScreen();
 
@@ -72,6 +142,7 @@ export class App {
       this.startAnimation();
 
       await Util.timeout(1000);
+      this.setMusic();
 
       panel.remove();
     }
@@ -83,15 +154,19 @@ export class App {
     const overlay = DOM.query('#overlay');
     const canvas = DOM.query('#canvas-main');
     const slider = DOM.query('.indicator-slide');
-    
+
     const x = window.scrollX;
     overlay.removeClass('head');
     overlay.removeClass('tail');
-    if(x < 10){
+    if (x < 10) {
+      this.isTail = false;
       overlay.addClass('head');
     } else if (x + window.innerWidth - window.document.body.scrollWidth > -10) {
+      this.isTail = true;
       overlay.addClass('tail');
       slider.style.display = 'none';
+    } else {
+      this.isTail = false;
     }
 
     slider.addClass('hidden');
@@ -107,7 +182,7 @@ export class App {
     }, 5000);
   }
 
-  private setScrollEvent(){
+  private setScrollEvent() {
     const body = DOM.query('body');
     const overlay = DOM.query('#overlay');
     const canvas = DOM.query('#canvas-main');
@@ -121,11 +196,14 @@ export class App {
       const x = window.scrollX;
       overlay.removeClass('head');
       overlay.removeClass('tail');
-      if(x < 10){
+      if (x < 10) {
         overlay.addClass('head');
+        slider.style.display = 'block';
       } else if (x + window.innerWidth - window.document.body.scrollWidth > -10) {
         overlay.addClass('tail');
         slider.style.display = 'none';
+      } else {
+        slider.style.display = 'block';
       }
 
       slider.addClass('hidden');
@@ -136,31 +214,40 @@ export class App {
     }, false);
   }
 
-  private checkScrollEffect(percent:number){
+  private checkScrollEffect(percent: number) {
     DOM.queryAll('[data-sccfx]').forEach(node => {
       let effect = node.getAttribute('data-sccfx');
       if (effect) {
-        node.style.transform = `translate(${percent*parseInt(effect)}em,0)`;
+        node.style.transform = `translate(${percent * parseInt(effect)}em,0)`;
       }
     });
   }
 
   private setIntersectionObserver() {
-    const io = new IntersectionObserver(  
+    const io = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
           if (entry.intersectionRatio > 0) {
             const target = entry.target as HTMLElement;
             target.addClass('active');
+
+            if (target.hasAttribute('data-with')) {
+              const withNode = DOM.queryAll(`[data-trg="${target.getAttribute('data-id')}"]`);
+              if (withNode) {
+                withNode.forEach(item => item.addClass('active'));
+              }
+            }
+
+            io.unobserve(target);
           }
         });
       });
-      DOM.queryAll('[data-trg="scrollin"]').forEach(node => {
-        io.observe(node);
-      });
+    DOM.queryAll('[data-trg="scrollin"]').forEach(node => {
+      io.observe(node);
+    });
   }
 
-  private initialCanvasSize(){
+  private initialCanvasSize() {
     const container = DOM.query('#container-main');
     container.style.fontSize = `${100 / this.height}vh`;
     const canvas = DOM.query('#canvas-main');
@@ -168,39 +255,54 @@ export class App {
     canvas.style.height = `${this.height}em`;
   }
 
-  private applyResource(elementResource: Element[]) {
+  private applyResource(resource: Resource) {
     return new Promise<boolean>(async (resolve) => {
+      const audio = DOM.query('#bgm') as HTMLAudioElement;
+      if (resource.music) {
+        audio.src = resource.music;
+        this.playMusic();
+      }
+
       const countLabel = DOM.query('.loading-count>span');
+      const prefix = resource.origin;
       let max = 0;
       let count = 0;
       let error = 0;
 
-      elementResource.forEach(element => {
+      resource.elements.forEach(element => {
         let id = element.name;
-        let node = DOM.query(`[data-id='${id}']`);
-        if(node){
-          max ++;
-          let img = new Image();
-          img.onload = () => {
-            count ++;
-            countLabel.textContent = `${Math.floor(count/max*100)}%`;
-          };
-          img.onerror = (e) => {
-            error ++;
-          }
-          img.src = this.prefix + element.path;
-          img.width = element.width;
-          img.height = element.height;
-          img.style.width = `${element.width}em`;
-          img.style.height = `${element.height}em`;
-          node.style.left = `${element.x}em`;
-          node.style.top = `${element.y}em`;
-          node.appendChild(img);
+        let list = DOM.queryAll(`[data-id='${id}']`);
+        if (list) {
+          list.forEach(node => {
+            max++;
+            const x = element.rdm_x ? element.x + Math.round((1 - Math.random() * 2) * element.rdm_x) : element.x;
+            const y = element.rdm_y ? element.y + Math.round((1 - Math.random() * 2) * element.rdm_y) : element.y;
+  
+            let img = new Image();
+            img.onload = () => {
+              count++;
+              countLabel.textContent = `${Math.floor(count / max * 100)}%`;
+            };
+            img.onerror = (e) => {
+              error++;
+            }
+            img.src = prefix + element.path;
+            img.width = element.width;
+            img.height = element.height;
+            img.style.width = `${element.width}em`;
+            img.style.height = `${element.height}em`;
+            if(element.opacity){
+              img.style.opacity = element.opacity.toString();
+            }
+            node.style.left = `${x}em`;
+            node.style.top = `${y}em`;
+            node.appendChild(img);
+          });
         }
       });
 
       while (count < max) {
-        if(error){
+        if (error) {
           return resolve(false);
         }
 
@@ -225,8 +327,8 @@ export class App {
     });
   }
 
-  private getElementResource() {
-    return new Promise<Element[]>((resolve, reject) => {
+  private getResource() {
+    return new Promise<Resource>((resolve, reject) => {
       const url = 'resource.json';
       fetch(url)
         .then((res) => res.json())
