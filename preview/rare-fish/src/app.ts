@@ -42,6 +42,10 @@ export class App {
       await Util.timeout(500);
       this.enableStartButton();
       this.enableHomeButton();
+      
+      if (location.search.includes('scrolloverride')) {
+        this.enableSwipeOverride();
+      }
 
       //await Util.timeout(2000);
       //this.enableAutoPlayButton();
@@ -57,6 +61,25 @@ export class App {
     DOM.query('.loading-refresh').onclick = async () => {
       location.reload();
     }
+  }
+
+  private enableSwipeOverride() {
+    DOM.query('html').style.scrollBehavior = 'auto';
+    let startX=0, startY=0, moveEndX=0, moveEndY=0;  
+    window.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].pageX;
+        startY = e.touches[0].pageY;
+    });
+    window.addEventListener("touchmove", (e) => {
+      e.preventDefault();
+        moveEndX = e.changedTouches[0].pageX;
+        moveEndY = e.changedTouches[0].pageY;
+        const x = moveEndX - startX;
+        const y = moveEndY - startY;
+        if (document.scrollingElement) {
+          document.scrollingElement.scrollBy(x * -1, y * -1);
+        }
+    }, { passive: false });
   }
 
   private setMusic() {

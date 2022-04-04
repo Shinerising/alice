@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="author" content="Alice Yan">
     <meta name="keywords" content="珍稀动物, 中华鲟, 长江, 三峡, 生态保护">
-    <meta name="description" content="">
+    <meta name="description" content="三峡集团大力推进长江水生生物保护工作，在长江珍稀特有鱼类保护方面，注重深化自然种群及栖息地保护、人工种群建设、增殖放流及效果评估等研究，持续针对长江上游珍稀特有鱼类保护技术、水生生态保护及修复开展科研攻关，为长江生物多样性恢复提供技术保障。">
     <title>长江珍稀鱼类图卷</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -16,7 +16,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <script>
+        var needOverride = false;
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            if ( /Android/i.test(navigator.userAgent) ) {
+                needOverride = true;
+            }
         }
         else{
             document.location = 'landscape.html';
@@ -28,11 +32,10 @@
             position:relative;
         }
         #iframe-main{
-            position:fixed;
+            position: absolute;
             width: 100vh;
             height: 100vw;
             border: none;
-            position: absolute;
             top: calc(50vh - 50vw);
             left: calc(50vw - 50vh);
             border:none;
@@ -42,6 +45,16 @@
     </style>
 </head>
 <body>
-    <iframe id="iframe-main" src="landscape.html"></iframe>
+    <iframe id="iframe-main" scrolling="yes"></iframe>
+    <script>
+        var page = document.getElementById('iframe-main');
+        page.width=window.innerHeight;
+        page.height=window.innerWidth;
+        if (needOverride) {
+            page.src = 'landscape.html?scrolloverride';
+        } else {
+            page.src = 'landscape.html';
+        }
+    </script>
 </body>
 </html>
