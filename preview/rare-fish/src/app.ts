@@ -23,7 +23,7 @@ HTMLElement.prototype.toggleClass = function (className: string) {
 export class App {
   private width: number = 38976;
   private height: number = 2008;
-  private isTail:boolean = false;
+  private isTail: boolean = false;
 
   constructor() {
   }
@@ -41,6 +41,7 @@ export class App {
     if (result) {
       await Util.timeout(500);
       this.enableStartButton();
+      this.enableHomeButton();
 
       //await Util.timeout(2000);
       //this.enableAutoPlayButton();
@@ -61,22 +62,21 @@ export class App {
   private setMusic() {
     const audio = DOM.query('#bgm') as HTMLAudioElement;
     if (audio.paused) {
-      try{
+      try {
         audio.currentTime = 0;
         audio.volume = .2;
         audio.play();
       }
-      catch{
+      catch {
 
       }
     } else {
-      audio.currentTime = 0;
       audio.volume = .2;
     }
   }
 
   private playMusic() {
-    const func = () => { 
+    const func = () => {
       document.removeEventListener('touchstart', func);
 
       const audio = DOM.query('#bgm') as HTMLAudioElement;
@@ -99,6 +99,16 @@ export class App {
     }
   }
 
+  private enableHomeButton() {
+    const button = DOM.query('.home-button');
+    button.onclick = (e) => {
+      e.preventDefault();
+      if (document.scrollingElement) {
+        document.scrollingElement.scrollLeft = 0;
+      }
+    }
+  }
+
   private enableAutoPlayButton() {
     const button = DOM.query('.loading-autoplay');
     button.onclick = async () => {
@@ -111,7 +121,7 @@ export class App {
     button.removeClass('hidden');
   }
 
-  private startAutoPlayInterval(){
+  private startAutoPlayInterval() {
     const id = setInterval(() => {
       if (!this.isTail) {
         window.scrollBy({
@@ -152,21 +162,30 @@ export class App {
 
   private startAnimation() {
     const overlay = DOM.query('#overlay');
-    const canvas = DOM.query('#canvas-main');
     const slider = DOM.query('.indicator-slide');
+    const home = DOM.query('.indicator-home');
 
     const x = window.scrollX;
+    const t = x + window.innerWidth - window.document.body.scrollWidth;
     overlay.removeClass('head');
     overlay.removeClass('tail');
     if (x < 10) {
       this.isTail = false;
       overlay.addClass('head');
-    } else if (x + window.innerWidth - window.document.body.scrollWidth > -10) {
+      slider.style.display = 'block';
+    } else if (t > -10) {
       this.isTail = true;
       overlay.addClass('tail');
       slider.style.display = 'none';
     } else {
+      slider.style.display = 'block';
       this.isTail = false;
+    }
+
+    if (t > -25) {
+      home.removeClass('hidden');
+    } else {
+      home.addClass('hidden');
     }
 
     slider.addClass('hidden');
@@ -185,8 +204,8 @@ export class App {
   private setScrollEvent() {
     const body = DOM.query('body');
     const overlay = DOM.query('#overlay');
-    const canvas = DOM.query('#canvas-main');
     const slider = DOM.query('.indicator-slide');
+    const home = DOM.query('.indicator-home');
 
     body.style.overflow = "auto";
     body.style.width = "auto";
@@ -194,16 +213,29 @@ export class App {
 
     window.addEventListener('scroll', () => {
       const x = window.scrollX;
+      const t = x + window.innerWidth - window.document.body.scrollWidth;
       overlay.removeClass('head');
       overlay.removeClass('tail');
       if (x < 10) {
+        this.isTail = false;
         overlay.addClass('head');
+        home.addClass('hidden');
         slider.style.display = 'block';
-      } else if (x + window.innerWidth - window.document.body.scrollWidth > -10) {
+      } else if (t > -10) {
+        this.isTail = true;
         overlay.addClass('tail');
+        home.addClass('hidden');
         slider.style.display = 'none';
       } else {
+        home.removeClass('hidden');
         slider.style.display = 'block';
+        this.isTail = false;
+      }
+
+      if (t > -25) {
+        home.removeClass('hidden');
+      } else {
+        home.addClass('hidden');
       }
 
       slider.addClass('hidden');
@@ -277,7 +309,7 @@ export class App {
             max++;
             const x = element.rdm_x ? element.x + Math.round((1 - Math.random() * 2) * element.rdm_x) : element.x;
             const y = element.rdm_y ? element.y + Math.round((1 - Math.random() * 2) * element.rdm_y) : element.y;
-  
+
             let img = new Image();
             img.onload = () => {
               count++;
@@ -291,7 +323,7 @@ export class App {
             img.height = element.height;
             img.style.width = `${element.width}em`;
             img.style.height = `${element.height}em`;
-            if(element.opacity){
+            if (element.opacity) {
               img.style.opacity = element.opacity.toString();
             }
             node.style.left = `${x}em`;

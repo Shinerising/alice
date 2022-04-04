@@ -202,6 +202,14 @@ body {
     transition: opacity .3s;
 }
 
+.ani-shine-l.active {
+    -webkit-mask-image: linear-gradient(to right, transparent, #fff, #fff, transparent);
+    -webkit-mask-size: 300% 100%;
+    mask-image: linear-gradient(to right, transparent, #fff, #fff, transparent);
+    mask-size: 300% 100%;
+    animation: ani-shine 15s both infinite;
+}
+
 .ani-shine.active {
     opacity: 1;
     -webkit-mask-image: linear-gradient(to right, transparent, #fff, #fff, transparent);
@@ -512,6 +520,7 @@ body {
     height: 100vh;
     top: 0;
     left: 0;
+    pointer-events: none;
 }
 
 #overlay::before,
@@ -541,6 +550,71 @@ body {
 #overlay::after {
     right: 0;
     background-image: linear-gradient(to left, rgba(0, 0, 0, .25), transparent);
+}
+
+.indicator-home {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .5s;
+    pointer-events: all;
+}
+
+.indicator-home.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.home-box{
+    padding:1em;
+    .home-button{
+        cursor:pointer;
+        position:relative;
+        background-image:linear-gradient(to bottom, #189261, #10774e);
+        color:#FFF;
+        border-radius:.8em .6em .6em .8em;
+        border:.15em solid #10774e;
+        padding:.4em .6em;
+        font-size:.75em;
+        line-height:150%;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow:0 .2em 1em rgba(0, 0, 0, .5);
+    }
+    .home-button::before{
+        content:'';
+        position:absolute;
+        width: 0; 
+        height: 0; 
+        top:0em;
+        left:-.8em;
+        border-radius:.5em;
+        border-top: 1em solid transparent;
+        border-bottom: 1em solid transparent; 
+        border-right:1em solid #10774e;
+    }
+    .home-button::after{
+        content:'';
+        position:absolute;
+        width: 1.6em; 
+        height: 1.6em; 
+        top:.2em;
+        left:-.6em;
+        background-image:linear-gradient(to bottom, #189261, #10774e);
+        clip-path: polygon(50% 0%, 50% 100%, 0% 50%);
+    }
+    .home-button:hover{
+        background-image:linear-gradient(to bottom, #36c68c, #21a26f);
+    }
+    .home-button:active{
+        background-image:linear-gradient(to bottom, #085c3a, #0c8655);
+    }
+    .home-button:hover::after{
+        background-image:linear-gradient(to bottom, #36c68c, #21a26f);
+    }
+    .home-button:active::after{
+        background-image:linear-gradient(to bottom, #085c3a, #0c8655);
+    }
 }
 
 .indicator-slide {
@@ -702,6 +776,7 @@ body {
         border: .2em solid #b53a10;
         border-radius: .5em;
         font-size: .6em;
+        font-weight:bold;
         padding: .5em 1em;
         cursor: pointer;
         transition: background .2s;
