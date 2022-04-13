@@ -30,5 +30,8 @@
     "webpack-cli": "^4.9.2",
     "webpack-shell-plugin-next": "^2.2.2",
     "workbox-webpack-plugin": "^6.5.3"
+  },
+  "dependencies": {
+    "async": "^3.2.3"
   }
 }
